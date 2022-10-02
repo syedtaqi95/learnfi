@@ -1,10 +1,12 @@
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, Container } from "@chakra-ui/react";
 import type { AppProps } from "next/app";
 
 function PortfolioDashboardApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider>
-      <Component {...pageProps} />
+      <Container>
+        <Component {...pageProps} />
+      </Container>
     </ChakraProvider>
   );
 }

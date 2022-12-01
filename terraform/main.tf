@@ -20,4 +20,11 @@ provider "aws" {
   region = "eu-west-2"
 }
 
+resource "aws_instance" "app_server" {
+  ami           = "ami-05bfd03d0709e3ecb"
+  instance_type = "t2.micro"
 
+  tags = {
+    Name = "ExampleAppServerInstance"
+  }
+}

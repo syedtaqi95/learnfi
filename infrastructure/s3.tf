@@ -4,10 +4,11 @@ resource "aws_s3_bucket" "root_s3_bucket" {
   force_destroy = true
 }
 
-// Access Control List set to public-read for root_S3_bucket
+// Access Control List for root_S3_bucket
+// Set to private to allow access only through Cloudfront
 resource "aws_s3_bucket_acl" "root_s3_acl" {
   bucket = aws_s3_bucket.root_s3_bucket.id
-  acl    = "public-read"
+  acl    = "private"
 }
 
 // S3 bucket policy to allow public read for root_S3_bucket

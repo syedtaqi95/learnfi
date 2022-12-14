@@ -46,7 +46,7 @@ resource "aws_cloudfront_distribution" "root_s3_distribution" {
 
 }
 
-// Origin access control for Cloudfront
+# Origin access control for Cloudfront
 resource "aws_cloudfront_origin_access_control" "default" {
   name                              = "default"
   description                       = "Origin access control for Cloudfront"

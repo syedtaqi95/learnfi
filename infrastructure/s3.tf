@@ -1,23 +1,27 @@
-// S3 bucket to host static website assets (html, css, js)
+#############################
+# Root S3 bucket resources
+#############################
+
+# S3 bucket to host static website assets (html, css, js)
 resource "aws_s3_bucket" "root_s3_bucket" {
   bucket        = "${var.subdomain_name}.${var.domain_name}"
   force_destroy = true
 }
 
-// Access Control List for root_S3_bucket
-// Set to private to allow access only through Cloudfront
+# Access Control List for root_S3_bucket
+# Set to private to allow access only through Cloudfront
 resource "aws_s3_bucket_acl" "root_s3_acl" {
   bucket = aws_s3_bucket.root_s3_bucket.id
   acl    = "private"
 }
 
-// S3 bucket policy to allow public read for root_S3_bucket
+# S3 bucket policy to allow public read for root_S3_bucket
 resource "aws_s3_bucket_policy" "root_bucket_policy" {
   bucket = aws_s3_bucket.root_s3_bucket.id
   policy = data.aws_iam_policy_document.root_bucket_policy.json
 }
 
-// Policy document for root_bucket_policy
+# Policy document for root_bucket_policy
 data "aws_iam_policy_document" "root_bucket_policy" {
   statement {
     sid = "PublicReadGetObject"
@@ -33,7 +37,7 @@ data "aws_iam_policy_document" "root_bucket_policy" {
   }
 }
 
-// CORS configuration to allow requests from domain
+# CORS configuration to allow requests from domain
 resource "aws_s3_bucket_cors_configuration" "root_bucket_cors" {
   bucket = aws_s3_bucket.root_s3_bucket.id
 
@@ -45,7 +49,7 @@ resource "aws_s3_bucket_cors_configuration" "root_bucket_cors" {
   }
 }
 
-// Website config for root_s3_bucket
+# Website config for root_s3_bucket
 resource "aws_s3_bucket_website_configuration" "root_bucket_website_config" {
   bucket = aws_s3_bucket.root_s3_bucket.id
   index_document { suffix = "index.html" }

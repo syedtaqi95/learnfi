@@ -12,7 +12,7 @@ resource "aws_cloudfront_distribution" "root_s3_distribution" {
   aliases = ["${var.subdomain_name}.${var.domain_name}"]
 
   default_cache_behavior {
-    allowed_methods  = ["GET", "HEAD", "POST"]
+    allowed_methods  = ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"]
     cached_methods   = ["GET", "HEAD"]
     target_origin_id = "S3-${var.subdomain_name}.${var.domain_name}"
 

@@ -1,6 +1,7 @@
 terraform {
   cloud {
     organization = "syed-taqi-haider"
+    # Modify this manually as variables are not allowed
     workspaces {
       name = "portfolio-dashboard-prod-eu-west-2"
     }

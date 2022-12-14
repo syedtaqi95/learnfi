@@ -4,7 +4,7 @@ variable "project_name" {
 }
 
 variable "subdomain_name" {
-  type = string
+  type        = string
   description = "The subdomain for the website."
 }
 

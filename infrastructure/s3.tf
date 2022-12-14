@@ -15,25 +15,34 @@ resource "aws_s3_bucket_acl" "root_s3_acl" {
   acl    = "private"
 }
 
-# S3 bucket policy to allow public read for root_S3_bucket
+# S3 bucket policy
 resource "aws_s3_bucket_policy" "root_bucket_policy" {
   bucket = aws_s3_bucket.root_s3_bucket.id
   policy = data.aws_iam_policy_document.root_bucket_policy.json
 }
 
-# Policy document for root_bucket_policy
+# Policy document for root_bucket_policy to allow only private access through Cloudfront
 data "aws_iam_policy_document" "root_bucket_policy" {
   statement {
-    sid = "PublicReadGetObject"
+    sid = "AllowCloudFrontServicePrincipal"
+
     principals {
-      type        = "*"
-      identifiers = ["*"]
+      type        = "Service"
+      identifiers = ["cloudfront.amazonaws.com"]
     }
+
     actions = ["s3:GetObject"]
+
     resources = [
       aws_s3_bucket.root_s3_bucket.arn,
       "${aws_s3_bucket.root_s3_bucket.arn}/*",
     ]
+
+    condition {
+      test     = "StringEquals"
+      variable = "AWS:SourceArn"
+      values   = [aws_cloudfront_distribution.root_s3_distribution.arn]
+    }
   }
 }
 

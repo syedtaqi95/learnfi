@@ -19,7 +19,7 @@ resource "aws_route53_record" "root-a" {
 # A-record to point the www domain to Cloudfront
 resource "aws_route53_record" "www-a" {
   zone_id = aws_route53_zone.domain.zone_id
-  name    = "${var.subdomain_name}.${var.domain_name}"
+  name    = "www.${var.subdomain_name}.${var.domain_name}"
   type    = "A"
 
   alias {

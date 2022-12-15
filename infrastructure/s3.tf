@@ -79,7 +79,7 @@ resource "aws_s3_bucket" "www_s3_bucket" {
 # Set to private to allow access only through Cloudfront
 resource "aws_s3_bucket_acl" "www_s3_acl" {
   bucket = aws_s3_bucket.www_s3_bucket.id
-  acl    = "private"
+  acl    = "public-read"
 }
 
 # S3 bucket policy
@@ -88,14 +88,14 @@ resource "aws_s3_bucket_policy" "www_bucket_policy" {
   policy = data.aws_iam_policy_document.www_bucket_policy.json
 }
 
-# Policy document for www_bucket_policy to allow only private access through Cloudfront
+# Policy document for www_bucket_policy
 data "aws_iam_policy_document" "www_bucket_policy" {
   statement {
-    sid = "AllowCloudFrontServicePrincipal"
+    sid = "PublicReadGetObject"
 
     principals {
-      type        = "Service"
-      identifiers = ["cloudfront.amazonaws.com"]
+      type        = "*"
+      identifiers = ["*"]
     }
 
     actions = ["s3:GetObject"]
@@ -104,12 +104,6 @@ data "aws_iam_policy_document" "www_bucket_policy" {
       aws_s3_bucket.www_s3_bucket.arn,
       "${aws_s3_bucket.www_s3_bucket.arn}/*",
     ]
-
-    condition {
-      test     = "StringEquals"
-      variable = "AWS:SourceArn"
-      values   = [aws_cloudfront_distribution.www_s3_distribution.arn]
-    }
   }
 }
 
@@ -118,5 +112,6 @@ resource "aws_s3_bucket_website_configuration" "www_bucket_website_config" {
   bucket = aws_s3_bucket.www_s3_bucket.id
   redirect_all_requests_to {
     host_name = "${var.subdomain_name}.${var.domain_name}"
+    protocol = "http"
   }
 }

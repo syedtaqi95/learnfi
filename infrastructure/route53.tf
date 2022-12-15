@@ -16,6 +16,19 @@ resource "aws_route53_record" "root-a" {
   }
 }
 
+# A-record to point the www domain to Cloudfront
+resource "aws_route53_record" "www-a" {
+  zone_id = aws_route53_zone.domain.zone_id
+  name    = "${var.subdomain_name}.${var.domain_name}"
+  type    = "A"
+
+  alias {
+    name                   = aws_cloudfront_distribution.www_s3_distribution.domain_name
+    zone_id                = aws_cloudfront_distribution.www_s3_distribution.hosted_zone_id
+    evaluate_target_health = false
+  }
+}
+
 # Create CNAME records to validate the TLS/SSL certificate
 resource "aws_route53_record" "cert_validation" {
   for_each = {

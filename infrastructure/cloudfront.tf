@@ -60,9 +60,17 @@ resource "aws_cloudfront_distribution" "root_s3_distribution" {
 # www Cloudfront distribution for redirect to root
 resource "aws_cloudfront_distribution" "www_s3_distribution" {
   origin {
-    domain_name              = aws_s3_bucket.www_s3_bucket.bucket_regional_domain_name
-    origin_id                = "S3-${aws_s3_bucket.www_s3_bucket.id}"
-    origin_access_control_id = aws_cloudfront_origin_access_control.default.id
+    domain_name = aws_s3_bucket.www_s3_bucket.website_endpoint
+    # Create a custom origin config as S3 origins don't work with Cloudfront
+    # See https://stackoverflow.com/questions/34060394/F
+    origin_id = "S3-${aws_s3_bucket.www_s3_bucket.id}"
+
+    custom_origin_config {
+      http_port              = 80
+      https_port             = 443
+      origin_protocol_policy = "http-only"
+      origin_ssl_protocols   = ["TLSv1", "TLSv1.1", "TLSv1.2"]
+    }
   }
 
   enabled         = true

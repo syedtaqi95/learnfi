@@ -112,6 +112,6 @@ resource "aws_s3_bucket_website_configuration" "www_bucket_website_config" {
   bucket = aws_s3_bucket.www_s3_bucket.id
   redirect_all_requests_to {
     host_name = "${var.subdomain_name}.${var.domain_name}"
-    protocol = "http"
+    protocol  = "http"
   }
 }

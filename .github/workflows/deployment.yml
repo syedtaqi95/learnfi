@@ -1,0 +1,51 @@
+name: deployment
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  detect-changes:
+    name: Detect changes in each top-level directoy
+    outputs:
+      frontend: ${{ steps.filter.outputs.frontend }}
+      infrastructure: ${{ steps.filter.outputs.infrastructure }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: dorny/paths-filter@v2
+        id: filter
+        with:
+          base: master
+          filters: |
+            frontend:
+              - 'frontend/**'
+            infrastructure::
+              - 'infrastructure/**'
+
+  build-and-deploy-frontend:
+    name: Build React App and deploy to AWS
+    needs: detect-changes
+    if: ${{ needs.detect-changes.outputs.frontend == 'true' }}
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v3
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+      - name: Build React App
+        run: npm install && npm run build
+      - name: Deploy React App to AWS S3 bucket
+        run: aws s3 sync ./dist ${{ secrets.S3_BUCKET_URL }} --delete
+      - name: Invalidate Cloudfront cache
+        run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }} --paths '/*'
+      # TODO: invalidate www Cloudfront cache 
+  
+  # TODO: build and deploy backend

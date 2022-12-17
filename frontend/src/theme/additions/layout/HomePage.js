@@ -1,6 +1,5 @@
 const HomePage = {
   baseStyle: {
-    float: "right",
     maxWidth: "100%",
     overflow: "auto",
     position: "relative",
@@ -12,10 +11,8 @@ const HomePage = {
   },
   variants: {
     main: (props) => ({
-      float: "right",
     }),
     rtl: (props) => ({
-      float: "left",
     }),
   },
   defaultProps: {

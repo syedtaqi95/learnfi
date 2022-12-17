@@ -1,4 +1,4 @@
-const MainPanel = {
+const HomePage = {
   baseStyle: {
     float: "right",
     maxWidth: "100%",
@@ -23,8 +23,8 @@ const MainPanel = {
   },
 };
 
-export const MainPanelComponent = {
+export const HomePageComponent = {
   components: {
-    MainPanel,
+    HomePage,
   },
 };

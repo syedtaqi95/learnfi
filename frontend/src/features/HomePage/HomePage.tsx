@@ -1,8 +1,11 @@
-import { Box, Container, Heading } from "@chakra-ui/react"
+import { Box, Container, Heading, useStyleConfig } from "@chakra-ui/react"
 
-const HomePage = () => {
+const HomePage = (props: { variant?: string, children?: any }) => {
+  const { variant, children, ...rest } = props;
+  const styles = useStyleConfig("MainPanel", { variant });
+
   return (
-    <Box>
+    <Box __css={styles} {...rest}>
       <Heading>build-a-portfolio</Heading>
       <Container>
         An open-source web app that helps beginners learn the basics of investing.

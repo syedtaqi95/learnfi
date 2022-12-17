@@ -6,7 +6,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/syedtaqi95/portfolio-dashboard">
+  <a href="https://portfolio-dashboard.syedtaqihaider.co.uk">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -21,7 +21,7 @@
     <a href="https://github.com/syedtaqi95/portfolio-dashboard"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://portfolio-dashboard.syedtaqihaider.co.uk">View Demo</a>
+    <a href="https://portfolio-dashboard.syedtaqihaider.co.uk">View App</a>
     ·
     <a href="https://github.com/syedtaqi95/portfolio-dashboard/issues">Report Bug</a>
     ·

@@ -1,15 +1,15 @@
-import { useState } from 'react'
+import { Box, Container, Heading } from "@chakra-ui/react"
 
 function App() {
   return (
-    <>
-      <h1>build-a-portfolio</h1>
-      <p>
+    <Box>
+      <Heading>build-a-portfolio</Heading>
+      <Container>
         An open-source web app that helps beginners learn the basics of investing.
         <br />
         Learn how to build a portfolio, analyse assets and more.
-      </p>
-    </>
+      </Container>
+    </Box>
   )
 }
 

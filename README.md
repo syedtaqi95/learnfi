@@ -10,10 +10,10 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Build-a-portfolio</h3>
+<h3 align="center">LearnFi</h3>
 
   <p align="center">
-    An open-source web app that helps beginners learn the basics of
+    A web-based learning platform that helps beginners learn the basics of
     investing. 
     <br />
     Learn how to build a portfolio, analyse assets and more.

@@ -6,9 +6,9 @@ const HomePage = (props: { variant?: string, children?: any }) => {
 
   return (
     <Box __css={styles} {...rest}>
-      <Heading>build-a-portfolio</Heading>
+      <Heading>LearnFi</Heading>
       <Container>
-        An open-source web app that helps beginners learn the basics of investing.
+      A web-based learning platform that helps beginners learn the basics of investing.
         <br />
         Learn how to build a portfolio, analyse assets and more.
       </Container>

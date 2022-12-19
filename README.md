@@ -6,7 +6,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://portfolio-dashboard.syedtaqihaider.co.uk">
+  <a href="https://learnfi.syedtaqihaider.co.uk">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -18,14 +18,14 @@
     <br />
     Learn how to build a portfolio, analyse assets and more.
     <br />
-    <a href="https://github.com/syedtaqi95/portfolio-dashboard"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/syedtaqi95/learnfi"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://portfolio-dashboard.syedtaqihaider.co.uk">View App</a>
+    <a href="https://learnfi.syedtaqihaider.co.uk">View App</a>
     ·
-    <a href="https://github.com/syedtaqi95/portfolio-dashboard/issues">Report Bug</a>
+    <a href="https://github.com/syedtaqi95/learnfi/issues">Report Bug</a>
     ·
-    <a href="https://github.com/syedtaqi95/portfolio-dashboard/issues">Request Feature</a>
+    <a href="https://github.com/syedtaqi95/learnfi/issues">Request Feature</a>
   </p>
 </div>
 
@@ -61,7 +61,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<!-- [![Portfolio Dashboard Screen Shot][product-screenshot]](https://portfolio-dashboard.syedtaqihaider.co.uk) -->
+<!-- [![Portfolio Dashboard Screen Shot][product-screenshot]](https://learnfi.syedtaqihaider.co.uk) -->
 
 🤔 When I began my investing journey in 2019, I found that most online
 tools and resources to learn investing were not friendly to beginners.
@@ -114,7 +114,7 @@ This is an example of how to list things you need to use the software and how to
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repo
    ```sh
-   git clone https://github.com/syedtaqi95/portfolio-dashboard.git
+   git clone https://github.com/syedtaqi95/learnfi.git
    ```
 3. Install NPM packages
    ```sh
@@ -148,7 +148,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [ ] Feature 3
     - [ ] Nested Feature
 
-See the [open issues](https://github.com/syedtaqi95/portfolio-dashboard/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/syedtaqi95/learnfi/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -186,7 +186,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Your Name - [syed.taqi95@gmail.com](syed.taqi95@gmail.com)
 
-Project Link: [https://github.com/syedtaqi95/portfolio-dashboard](https://github.com/syedtaqi95/portfolio-dashboard)
+Project Link: [https://github.com/syedtaqi95/learnfi](https://github.com/syedtaqi95/learnfi)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -194,16 +194,16 @@ Project Link: [https://github.com/syedtaqi95/portfolio-dashboard](https://github
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/syedtaqi95/portfolio-dashboard.svg?style=for-the-badge
-[contributors-url]: https://github.com/syedtaqi95/portfolio-dashboard/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/syedtaqi95/portfolio-dashboard.svg?style=for-the-badge
-[forks-url]: https://github.com/syedtaqi95/portfolio-dashboard/network/members
-[stars-shield]: https://img.shields.io/github/stars/syedtaqi95/portfolio-dashboard.svg?style=for-the-badge
-[stars-url]: https://github.com/syedtaqi95/portfolio-dashboard/stargazers
-[issues-shield]: https://img.shields.io/github/issues/syedtaqi95/portfolio-dashboard.svg?style=for-the-badge
-[issues-url]: https://github.com/syedtaqi95/portfolio-dashboard/issues
-[license-shield]: https://img.shields.io/github/license/syedtaqi95/portfolio-dashboard.svg?style=for-the-badge
-[license-url]: https://github.com/syedtaqi95/portfolio-dashboard/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/syedtaqi95/learnfi.svg?style=for-the-badge
+[contributors-url]: https://github.com/syedtaqi95/learnfi/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/syedtaqi95/learnfi.svg?style=for-the-badge
+[forks-url]: https://github.com/syedtaqi95/learnfi/network/members
+[stars-shield]: https://img.shields.io/github/stars/syedtaqi95/learnfi.svg?style=for-the-badge
+[stars-url]: https://github.com/syedtaqi95/learnfi/stargazers
+[issues-shield]: https://img.shields.io/github/issues/syedtaqi95/learnfi.svg?style=for-the-badge
+[issues-url]: https://github.com/syedtaqi95/learnfi/issues
+[license-shield]: https://img.shields.io/github/license/syedtaqi95/learnfi.svg?style=for-the-badge
+[license-url]: https://github.com/syedtaqi95/learnfi/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/syedtaqi-haider
 [product-screenshot]: images/screenshot.png

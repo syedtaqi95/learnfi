@@ -20,22 +20,21 @@ import { SunIcon, MoonIcon, HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 const Navbar = () => {
   // Color mode utils
   const { colorMode, toggleColorMode } = useColorMode();
-  const bg = useColorModeValue("white", "gray.800");
-  const buttonBg = useColorModeValue("gray.100", "gray.900");
+  const bg = useColorModeValue("gray.50", "gray.800");
+  const buttonBg = useColorModeValue("gray.50", "gray.900");
 
   return (
     <Box
       as="nav"
-      py={4}
+      py={2}
       position="sticky"
       top="0"
       bg={bg}
-      zIndex={1}
       borderBottomWidth="1px"
-      borderColor="gray.100"
+      borderColor="gray.50"
     >
       <Container
-        maxW="100vw"
+        maxW="95vw"
         display="flex"
         justifyContent="space-between"
         alignItems="center"
@@ -44,11 +43,9 @@ const Navbar = () => {
         <Link href="/">
           <Image
             boxSize={{ base: "40px", md: "50px" }}
-            src="/favicon.ico"
+            src="/logo.svg"
             alt="Brand Icon"
-            filter={colorMode === "light" ? "invert(1)" : undefined}
           />
-          <span>LearnFi</span>
         </Link>
 
         {/* Desktop - website links on the right */}
@@ -56,9 +53,7 @@ const Navbar = () => {
           <Button
             as="a"
             href={"/"}
-            bg={bg}
-            onMouseOver={(e) => { e.currentTarget.style.textDecorationLine = "underline" }}
-            onMouseOut={(e) => { e.currentTarget.style.textDecorationLine = "none" }}
+            colorScheme="teal"
           >
             Home
           </Button>

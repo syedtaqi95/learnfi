@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
 
 jobs:
   detect-changes:
@@ -46,6 +47,6 @@ jobs:
         run: aws s3 sync ./dist ${{ secrets.S3_BUCKET_URL }} --delete
       - name: Invalidate Cloudfront cache
         run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }} --paths '/*'
-      # TODO: invalidate www Cloudfront cache 
-  
+      # TODO: invalidate www Cloudfront cache
+
   # TODO: build and deploy backend

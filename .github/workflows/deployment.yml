@@ -28,7 +28,7 @@ jobs:
   build-and-deploy-frontend:
     name: Build React App and deploy to AWS
     needs: detect-changes
-    if: ${{ needs.detect-changes.outputs.frontend == 'true' }}
+    if: ${{ needs.detect-changes.outputs.frontend == 'true' || needs.detect-changes.outputs.infrastructure == 'true' }}
     runs-on: ubuntu-latest
     defaults:
       run:

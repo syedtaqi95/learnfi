@@ -83,13 +83,9 @@ const Navbar = (props: { variant?: string; children?: any }) => {
                   Home
                 </MenuItem>
 
-                <MenuItem>
+                <MenuItem onClick={toggleColorMode}>
                   {/* Color mode button */}
-                  {colorMode === "light" ? (
-                    <MoonIcon onClick={toggleColorMode} />
-                  ) : (
-                    <SunIcon onClick={toggleColorMode} />
-                  )}
+                  {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
                 </MenuItem>
               </MenuList>
             </>

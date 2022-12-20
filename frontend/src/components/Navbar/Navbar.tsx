@@ -13,25 +13,25 @@ import {
   useColorModeValue,
   Image,
   Link,
-  Icon,
+  useStyleConfig,
 } from "@chakra-ui/react";
 import { SunIcon, MoonIcon, HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 
-const Navbar = () => {
+const Navbar = (props: { variant?: string; children?: any }) => {
   // Color mode utils
   const { colorMode, toggleColorMode } = useColorMode();
   const bg = useColorModeValue("gray.50", "gray.800");
 
+  const { variant, children, ...rest } = props;
+  const styles = useStyleConfig("Navbar", { variant });
+
   return (
-    <Box as="nav" py={2} position="sticky" top="1" bg={bg}>
+    <Box __css={styles}>
       <Container
-        maxW="95vw"
         display="flex"
         justifyContent="space-between"
         alignItems="center"
-        borderRadius={15}
-        borderColor="white"
-        borderWidth={1}
+        maxW="95vw"
       >
         {/* All viewports - Brand on the left */}
         <Link href="/">

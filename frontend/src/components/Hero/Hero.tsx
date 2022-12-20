@@ -11,9 +11,9 @@ import Brand from "../Brand";
 
 const Hero = () => {
   return (
-    <VStack mt={36}>
+    <VStack mt={{base: "15vw", md: 28}}>
       {/* Main heading */}
-      <Heading w={"66vw"} as="h1" fontSize={{ base: "15vw", md: "9xl" }}>
+      <Heading as="h1" fontSize={{ base: "15vw", md: "9xl" }}>
         <Brand />
       </Heading>
 

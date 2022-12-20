@@ -1,5 +1,5 @@
-import HomePage from "@/features/HomePage"
-import Navbar from "@/components/Navbar"
+import HomePage from "@/features/HomePage";
+import Navbar from "@/components/Navbar";
 
 function App() {
   return (
@@ -7,7 +7,7 @@ function App() {
       <Navbar />
       <HomePage />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

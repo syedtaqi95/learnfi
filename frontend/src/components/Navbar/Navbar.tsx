@@ -23,13 +23,7 @@ const Navbar = () => {
   const bg = useColorModeValue("gray.50", "gray.800");
 
   return (
-    <Box
-      as="nav"
-      py={2}
-      position="sticky"
-      top="1"
-      bg={bg}
-    >
+    <Box as="nav" py={2} position="sticky" top="1" bg={bg}>
       <Container
         maxW="95vw"
         display="flex"
@@ -51,16 +45,11 @@ const Navbar = () => {
               LearnFi
             </Box>
           </HStack>
-
         </Link>
 
         {/* Desktop - website links on the right */}
         <HStack display={{ base: "none", md: "initial" }}>
-          <Button
-            as="a"
-            href={"/"}
-            bg={bg}
-          >
+          <Button as="a" href={"/"} bg={bg}>
             Home
           </Button>
 
@@ -79,32 +68,33 @@ const Navbar = () => {
                   as={IconButton}
                   aria-label="menu"
                   color="white"
-                  icon={isOpen ?
-                    <CloseIcon
-                      height="1.4em"
-                      color={colorMode === "light" ? "black" : "white"}
-                    /> :
-                    <HamburgerIcon
-                      height="1.4em"
-                      color={colorMode === "light" ? "black" : "white"}
-                    />
+                  icon={
+                    isOpen ? (
+                      <CloseIcon
+                        height="1.4em"
+                        color={colorMode === "light" ? "black" : "white"}
+                      />
+                    ) : (
+                      <HamburgerIcon
+                        height="1.4em"
+                        color={colorMode === "light" ? "black" : "white"}
+                      />
+                    )
                   }
                   id="1"
                 />
                 <MenuList>
-                  <MenuItem
-                    as="a"
-                    href="/"
-                  >
+                  <MenuItem as="a" href="/">
                     Home
                   </MenuItem>
 
                   <MenuItem>
                     {/* Color mode button */}
-                    {colorMode === "light" ?
-                      <MoonIcon onClick={toggleColorMode} bg={bg} /> :
+                    {colorMode === "light" ? (
+                      <MoonIcon onClick={toggleColorMode} bg={bg} />
+                    ) : (
                       <SunIcon onClick={toggleColorMode} bg={bg} />
-                    }
+                    )}
                   </MenuItem>
                 </MenuList>
               </>

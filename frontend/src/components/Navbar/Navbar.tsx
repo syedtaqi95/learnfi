@@ -36,7 +36,7 @@ const Navbar = (props: { variant?: string; children?: any }) => {
             src="/logo.svg"
             alt="Brand Icon"
           />
-          <Box px={"3"} fontWeight="bold" fontSize={"xl"}>
+          <Box px={"3"} fontWeight="bold" fontSize={{ base: "md", md: "xl" }}>
             LearnFi
           </Box>
         </HStack>

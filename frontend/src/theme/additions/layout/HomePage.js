@@ -1,6 +1,5 @@
-const MainPanel = {
+const HomePage = {
   baseStyle: {
-    float: "right",
     maxWidth: "100%",
     overflow: "auto",
     position: "relative",
@@ -10,21 +9,10 @@ const MainPanel = {
     transitionProperty: "top, bottom, width",
     transitionTimingFunction: "linear, linear, ease",
   },
-  variants: {
-    main: (props) => ({
-      float: "right",
-    }),
-    rtl: (props) => ({
-      float: "left",
-    }),
-  },
-  defaultProps: {
-    variant: "main",
-  },
 };
 
-export const MainPanelComponent = {
+export const HomePageComponent = {
   components: {
-    MainPanel,
+    HomePage,
   },
 };

@@ -1,16 +1,13 @@
-import { Box, Container, Heading } from "@chakra-ui/react"
+import HomePage from "@/features/HomePage";
+import Navbar from "@/components/Navbar";
 
 function App() {
   return (
-    <Box>
-      <Heading>LearnFi</Heading>
-      <Container>
-        A web-based learning platform that helps beginners learn the basics of investing.
-        <br />
-        Learn how to build a portfolio, analyse assets and more.
-      </Container>
-    </Box>
-  )
+    <>
+      <Navbar />
+      <HomePage />
+    </>
+  );
 }
 
-export default App
+export default App;

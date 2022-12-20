@@ -32,7 +32,7 @@ const Navbar = (props: { variant?: string; children?: any }) => {
         <HStack>
           <Image
             boxSize={{ base: "24px", md: "48px" }}
-            src="/logo.svg"
+            src="/logo.png"
             alt="Brand Icon"
           />
           <Box px={"3"} fontWeight="bold" fontSize={{ base: "md", md: "xl" }}>

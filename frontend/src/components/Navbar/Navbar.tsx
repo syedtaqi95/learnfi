@@ -1,7 +1,7 @@
 import React from "react";
 import {
   Box,
-  Container,
+  Flex,
   HStack,
   IconButton,
   Menu,
@@ -55,7 +55,7 @@ const Navbar = (props: { variant?: string; children?: any }) => {
       </HStack>
 
       {/* Mobile - dropdown menu */}
-      <HStack display={{ base: "initial", md: "none" }}>
+      <Flex display={{ base: "initial", md: "none" }}>
         <Menu>
           {({ isOpen }) => (
             <>
@@ -86,16 +86,16 @@ const Navbar = (props: { variant?: string; children?: any }) => {
                 <MenuItem>
                   {/* Color mode button */}
                   {colorMode === "light" ? (
-                    <MoonIcon onClick={toggleColorMode} bg={bg} />
+                    <MoonIcon onClick={toggleColorMode} />
                   ) : (
-                    <SunIcon onClick={toggleColorMode} bg={bg} />
+                    <SunIcon onClick={toggleColorMode} />
                   )}
                 </MenuItem>
               </MenuList>
             </>
           )}
         </Menu>
-      </HStack>
+      </Flex>
     </Box>
   );
 };

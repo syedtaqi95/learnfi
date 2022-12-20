@@ -4,7 +4,7 @@ const Navbar = {
     position: "sticky",
     maxW: "95vw",
     margin: "auto",
-    top: "1",
+    top: "0",
     borderRadius: 15,
     backdropFilter: "auto",
     backdropBlur: "8px",

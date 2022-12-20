@@ -27,7 +27,7 @@ const Navbar = () => {
       as="nav"
       py={2}
       position="sticky"
-      top="0"
+      top="1"
       bg={bg}
     >
       <Container
@@ -35,6 +35,9 @@ const Navbar = () => {
         display="flex"
         justifyContent="space-between"
         alignItems="center"
+        borderRadius={15}
+        borderColor="white"
+        borderWidth={1}
       >
         {/* All viewports - Brand on the left */}
         <Link href="/">
@@ -44,7 +47,7 @@ const Navbar = () => {
               src="/logo.svg"
               alt="Brand Icon"
             />
-            <Box color="teal.100" >
+            <Box px={"3"} fontWeight="bold" fontSize={"xl"}>
               LearnFi
             </Box>
           </HStack>
@@ -56,7 +59,7 @@ const Navbar = () => {
           <Button
             as="a"
             href={"/"}
-            colorScheme="teal"
+            bg={bg}
           >
             Home
           </Button>

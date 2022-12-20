@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Box,
   Flex,
@@ -23,7 +22,7 @@ const Navbar = (props: { variant?: string; children?: any }) => {
   const bg = useColorModeValue("gray.50", "gray.800");
 
   // import style from theme
-  const { variant, children, ...rest } = props;
+  const { variant } = props;
   const styles = useStyleConfig("Navbar", { variant });
 
   return (
@@ -63,6 +62,7 @@ const Navbar = (props: { variant?: string; children?: any }) => {
                 as={IconButton}
                 aria-label="menu"
                 color="white"
+                bg={bg}
                 icon={
                   isOpen ? (
                     <CloseIcon

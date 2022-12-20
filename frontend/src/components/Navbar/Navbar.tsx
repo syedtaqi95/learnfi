@@ -15,6 +15,7 @@ import {
   useStyleConfig,
 } from "@chakra-ui/react";
 import { SunIcon, MoonIcon, HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import { FaGithub } from "react-icons/fa";
 
 const Navbar = (props: { variant?: string; children?: any }) => {
   // Color mode utils
@@ -47,6 +48,15 @@ const Navbar = (props: { variant?: string; children?: any }) => {
           Home
         </Button>
 
+        <IconButton
+          as="a"
+          href="https://github.com/syedtaqi95/learnfi"
+          icon={<FaGithub />}
+          aria-label="Github link"
+          bg={bg}
+          target="_blank"
+        />
+
         {/* Color mode button */}
         <Button onClick={toggleColorMode} bg={bg}>
           {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
@@ -61,7 +71,6 @@ const Navbar = (props: { variant?: string; children?: any }) => {
               <MenuButton
                 as={IconButton}
                 aria-label="menu"
-                color="white"
                 bg={bg}
                 icon={
                   isOpen ? (

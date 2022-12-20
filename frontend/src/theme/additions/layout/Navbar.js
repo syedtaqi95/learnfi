@@ -1,6 +1,5 @@
 const Navbar = {
   baseStyle: {
-    as: "nav",
     py: 2,
     position: "sticky",
     maxW: "95vw",
@@ -10,6 +9,9 @@ const Navbar = {
     backdropFilter: "auto",
     backdropBlur: "8px",
     zIndex: "overlay",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
   },
 };
 

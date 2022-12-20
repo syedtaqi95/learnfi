@@ -1,12 +1,23 @@
 import React from "react";
-import { Box, Container, Heading, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Heading,
+  VStack,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
+import Brand from "../Brand";
 
 const Hero = () => {
   return (
     <VStack mt={36}>
-      <Heading as="h1" fontSize={{ base: "5xl", md: "8xl" }}>
-        LearnFi
+      {/* Main heading */}
+      <Heading w={"66vw"} as="h1" fontSize={{ base: "15vw", md: "9xl" }}>
+        <Brand />
       </Heading>
+
+      {/* Title description */}
       <Container>
         A web-based learning platform that helps beginners learn the basics of
         investing.

@@ -21,7 +21,6 @@ const Navbar = () => {
   // Color mode utils
   const { colorMode, toggleColorMode } = useColorMode();
   const bg = useColorModeValue("gray.50", "gray.800");
-  const buttonBg = useColorModeValue("gray.50", "gray.900");
 
   return (
     <Box
@@ -30,8 +29,6 @@ const Navbar = () => {
       position="sticky"
       top="0"
       bg={bg}
-      borderBottomWidth="1px"
-      borderColor="gray.50"
     >
       <Container
         maxW="95vw"
@@ -41,11 +38,17 @@ const Navbar = () => {
       >
         {/* All viewports - Brand on the left */}
         <Link href="/">
-          <Image
-            boxSize={{ base: "40px", md: "50px" }}
-            src="/logo.svg"
-            alt="Brand Icon"
-          />
+          <HStack>
+            <Image
+              boxSize={{ base: "24px", md: "48px" }}
+              src="/logo.svg"
+              alt="Brand Icon"
+            />
+            <Box color="teal.100" >
+              LearnFi
+            </Box>
+          </HStack>
+
         </Link>
 
         {/* Desktop - website links on the right */}
@@ -59,7 +62,7 @@ const Navbar = () => {
           </Button>
 
           {/* Color mode button */}
-          <Button onClick={toggleColorMode} bg={buttonBg}>
+          <Button onClick={toggleColorMode} bg={bg}>
             {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
           </Button>
         </HStack>
@@ -96,8 +99,8 @@ const Navbar = () => {
                   <MenuItem>
                     {/* Color mode button */}
                     {colorMode === "light" ?
-                      <MoonIcon onClick={toggleColorMode} bg={buttonBg} /> :
-                      <SunIcon onClick={toggleColorMode} bg={buttonBg} />
+                      <MoonIcon onClick={toggleColorMode} bg={bg} /> :
+                      <SunIcon onClick={toggleColorMode} bg={bg} />
                     }
                   </MenuItem>
                 </MenuList>

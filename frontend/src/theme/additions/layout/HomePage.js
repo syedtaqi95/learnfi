@@ -9,15 +9,6 @@ const HomePage = {
     transitionProperty: "top, bottom, width",
     transitionTimingFunction: "linear, linear, ease",
   },
-  variants: {
-    main: (props) => ({
-    }),
-    rtl: (props) => ({
-    }),
-  },
-  defaultProps: {
-    variant: "main",
-  },
 };
 
 export const HomePageComponent = {

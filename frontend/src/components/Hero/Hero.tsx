@@ -8,7 +8,7 @@ const Hero = () => {
       <Heading
         as="h1"
         w="100%"
-        fontSize={{ base: "48px", md: "70px", lg: "100px" }}
+        fontSize={{ base: "48px", "2sm": "70px", lg: "100px" }}
       >
         <Brand variant="dynamic" />
       </Heading>

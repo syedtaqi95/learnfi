@@ -20,10 +20,9 @@ const Hero = () => {
         pt={{ base: 2, md: 8 }}
         textAlign="center"
       >
-        LearnFi is a web-based platform that teaches beginners the basics of
-        investing using a "learn-by-doing" approach. Take control of your
-        financial future and start investing like a pro. Sign up today and start
-        building a solid foundation for your financial success!
+        LearnFi is a web-based platform that uses a "learn-by-doing" approach to
+        teach beginners how to start investing like a pro. Sign up today and
+        start building a solid foundation for your financial success!
       </Box>
     </VStack>
   );

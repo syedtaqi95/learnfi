@@ -55,7 +55,7 @@ const Hero = () => {
           h="64px"
           px="40px"
           maxW={{ base: "100%" }}
-          _hover={{ bg: "green.300" }}
+          _hover={{ bg: useColorModeValue("green.500", "green.300") }}
           fontSize={"20px"}
         >
           Get Started

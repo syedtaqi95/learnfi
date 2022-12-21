@@ -1,5 +1,14 @@
-import { Box, Heading, VStack, useColorModeValue } from "@chakra-ui/react";
+import {
+  Box,
+  Heading,
+  VStack,
+  useColorModeValue,
+  Flex,
+  Button,
+} from "@chakra-ui/react";
 import Brand from "@/components/Brand";
+import { IoMdArrowForward } from "react-icons/io";
+import { FaGithub } from "react-icons/fa";
 
 const Hero = () => {
   return (
@@ -24,6 +33,53 @@ const Hero = () => {
         teach beginners how to start investing like a pro. Sign up today and
         start building a solid foundation for your financial success!
       </Box>
+
+      {/* Button links */}
+      <Flex
+        pt={"40px"}
+        w="100%"
+        direction="row"
+        justifyContent={"center"}
+        gap={4}
+        wrap="wrap"
+      >
+        {/* Get Started button */}
+        <Button
+          as="a"
+          href="/"
+          rightIcon={<IoMdArrowForward />}
+          color={useColorModeValue("gray.50", "gray.800")}
+          bg={"green.400"}
+          variant="solid"
+          w={{ base: "100%", "2sm": "200px" }}
+          h="64px"
+          px="40px"
+          maxW={{ base: "100%" }}
+          _hover={{ bg: "green.300" }}
+          fontSize={"20px"}
+        >
+          Get Started
+        </Button>
+
+        {/* GitHub button */}
+        <Button
+          as="a"
+          href="https://github.com/syedtaqi95/learnfi"
+          target={"_blank"}
+          leftIcon={<FaGithub />}
+          color={useColorModeValue("gray.800", "gray.50")}
+          bg={useColorModeValue("gray.200", "gray.700")}
+          variant="solid"
+          w={{ base: "100%", "2sm": "200px" }}
+          h="64px"
+          px="40px"
+          maxW={{ base: "100%" }}
+          _hover={{ bg: useColorModeValue("gray.300", "gray.600") }}
+          fontSize={"20px"}
+        >
+          GitHub
+        </Button>
+      </Flex>
     </VStack>
   );
 };

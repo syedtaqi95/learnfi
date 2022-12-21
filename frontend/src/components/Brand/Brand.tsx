@@ -2,13 +2,17 @@ import { Text, useColorModeValue } from "@chakra-ui/react";
 import Typed from "react-typed";
 
 const Brand = ({ variant }: { variant?: "dynamic" }) => {
+  const firstSectionColor = useColorModeValue("green.400", "white");
+  const secondSectionColor = useColorModeValue("black", "green.400");
+
+  // Dynamic variant with typewriter effect
   if (variant === "dynamic") {
     return (
       <>
-        <Text as="span" color={useColorModeValue("green.400", "white")}>
+        <Text as="span" color={firstSectionColor}>
           Learn{" "}
         </Text>
-        <Text as="span" color={useColorModeValue("black", "green.400")}>
+        <Text as="span" color={secondSectionColor}>
           <Typed
             strings={["Finance", "Investing", "Stocks"]}
             typeSpeed={100}
@@ -20,12 +24,13 @@ const Brand = ({ variant }: { variant?: "dynamic" }) => {
       </>
     );
   } else {
+    // Static variant
     return (
       <>
-        <Text as="span" color={useColorModeValue("green.400", "white")}>
+        <Text as="span" color={firstSectionColor}>
           Learn
         </Text>
-        <Text as="span" color={useColorModeValue("black", "green.400")}>
+        <Text as="span" color={secondSectionColor}>
           Fi
         </Text>
       </>

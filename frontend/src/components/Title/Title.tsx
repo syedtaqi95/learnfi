@@ -4,21 +4,18 @@ import Brand from "@/components/Brand";
 const Title = () => {
   return (
     <>
-       {/* Main heading */}
-      <Heading
-        as="h1"
-        fontSize={{
-          base: "15vw",
-          md: "9xl",
-        }}
-      >
-        <Brand variant="dynamic"/>
+      {/* Main heading */}
+      <Heading as="h1" fontSize="10vw">
+        <Brand variant="dynamic" />
       </Heading>
       {/* Title description */}
       <Container
-        textAlign={"center"}
+        centerContent
         maxW="66vw"
         color={useColorModeValue("gray.500", "gray.400")}
+        fontSize={{
+          base: "4vw"
+        }}
       >
         LearnFi is a web-based platform that teaches beginners the basics of
         investing using a "learn-by-doing" approach. Take control of your

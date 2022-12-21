@@ -12,7 +12,7 @@ import { FaGithub } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <VStack as="section" mt={{ base: "40px", md: 36 }}>
+    <VStack as="section" mt={{ base: "40px", md: 36 }} pb="80px">
       {/* Main heading */}
       <Heading
         as="h1"

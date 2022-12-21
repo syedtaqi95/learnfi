@@ -17,7 +17,7 @@ const Title = () => {
           base: "4vw"
         }}
       >
-        LearnFi is a web-based platform that teaches beginners the basics of
+        LearnFi is a web-based platform that teaches beginners the basics of 
         investing using a "learn-by-doing" approach. Take control of your
         financial future and start investing like a pro. Sign up today and start
         building a solid foundation for your financial success!

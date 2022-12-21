@@ -7,22 +7,16 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-import Brand from "../Brand";
+import Title from "@/components/Title";
 
 const Hero = () => {
   return (
-    <VStack mt={{base: "15vw", md: 28}}>
-      {/* Main heading */}
-      <Heading as="h1" fontSize={{ base: "15vw", md: "9xl" }}>
-        <Brand />
-      </Heading>
+    <VStack mt={{ base: "15vw", md: 28 }}>
+      {/* Main heading and description */}
+      <Title />
 
-      {/* Title description */}
-      <Container maxW="90vw">
-        A web-based learning platform that helps beginners learn the basics of
-        investing.
+      <Container>
         <br />
-        Learn how to build a portfolio, analyse assets and more.
         <br />
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus
         accusantium assumenda tempora in aliquam ullam culpa quis quae similique
@@ -103,87 +97,7 @@ const Hero = () => {
         doloremque possimus! Lorem ipsum dolor sit amet consectetur adipisicing
         elit. Eaque ipsam, ipsum similique repellendus odit officiis dignissimos
         velit ducimus sit dicta repellat fuga optio quo debitis quibusdam nobis
-        fugit! Tenetur, adipisci. Lorem ipsum dolor, sit amet consectetur
-        adipisicing elit. Delectus accusantium assumenda tempora in aliquam
-        ullam culpa quis quae similique praesentium laboriosam quas nobis
-        voluptates, consectetur harum! Aliquid velit nobis eos? Lorem, ipsum
-        dolor sit amet consectetur adipisicing elit. Expedita, ullam vero
-        ducimus animi, tempore impedit dolorum quaerat minus provident
-        laboriosam quod natus similique minima unde incidunt? Voluptas ea
-        doloremque possimus! Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Eaque ipsam, ipsum similique repellendus odit officiis dignissimos
-        velit ducimus sit dicta repellat fuga optio quo debitis quibusdam nobis
-        fugit! Tenetur, adipisci. Lorem ipsum dolor, sit amet consectetur
-        adipisicing elit. Delectus accusantium assumenda tempora in aliquam
-        ullam culpa quis quae similique praesentium laboriosam quas nobis
-        voluptates, consectetur harum! Aliquid velit nobis eos? Lorem, ipsum
-        dolor sit amet consectetur adipisicing elit. Expedita, ullam vero
-        ducimus animi, tempore impedit dolorum quaerat minus provident
-        laboriosam quod natus similique minima unde incidunt? Voluptas ea
-        doloremque possimus! Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Eaque ipsam, ipsum similique repellendus odit officiis dignissimos
-        velit ducimus sit dicta repellat fuga optio quo debitis quibusdam nobis
-        fugit! Tenetur, adipisci. Lorem ipsum dolor, sit amet consectetur
-        adipisicing elit. Delectus accusantium assumenda tempora in aliquam
-        ullam culpa quis quae similique praesentium laboriosam quas nobis
-        voluptates, consectetur harum! Aliquid velit nobis eos? Lorem, ipsum
-        dolor sit amet consectetur adipisicing elit. Expedita, ullam vero
-        ducimus animi, tempore impedit dolorum quaerat minus provident
-        laboriosam quod natus similique minima unde incidunt? Voluptas ea
-        doloremque possimus! Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Eaque ipsam, ipsum similique repellendus odit officiis dignissimos
-        velit ducimus sit dicta repellat fuga optio quo debitis quibusdam nobis
-        fugit! Tenetur, adipisci. Lorem ipsum dolor, sit amet consectetur
-        adipisicing elit. Delectus accusantium assumenda tempora in aliquam
-        ullam culpa quis quae similique praesentium laboriosam quas nobis
-        voluptates, consectetur harum! Aliquid velit nobis eos? Lorem, ipsum
-        dolor sit amet consectetur adipisicing elit. Expedita, ullam vero
-        ducimus animi, tempore impedit dolorum quaerat minus provident
-        laboriosam quod natus similique minima unde incidunt? Voluptas ea
-        doloremque possimus! Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Eaque ipsam, ipsum similique repellendus odit officiis dignissimos
-        velit ducimus sit dicta repellat fuga optio quo debitis quibusdam nobis
-        fugit! Tenetur, adipisci. Lorem ipsum dolor, sit amet consectetur
-        adipisicing elit. Delectus accusantium assumenda tempora in aliquam
-        ullam culpa quis quae similique praesentium laboriosam quas nobis
-        voluptates, consectetur harum! Aliquid velit nobis eos? Lorem, ipsum
-        dolor sit amet consectetur adipisicing elit. Expedita, ullam vero
-        ducimus animi, tempore impedit dolorum quaerat minus provident
-        laboriosam quod natus similique minima unde incidunt? Voluptas ea
-        doloremque possimus! Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Eaque ipsam, ipsum similique repellendus odit officiis dignissimos
-        velit ducimus sit dicta repellat fuga optio quo debitis quibusdam nobis
-        fugit! Tenetur, adipisci. Lorem ipsum dolor, sit amet consectetur
-        adipisicing elit. Delectus accusantium assumenda tempora in aliquam
-        ullam culpa quis quae similique praesentium laboriosam quas nobis
-        voluptates, consectetur harum! Aliquid velit nobis eos? Lorem, ipsum
-        dolor sit amet consectetur adipisicing elit. Expedita, ullam vero
-        ducimus animi, tempore impedit dolorum quaerat minus provident
-        laboriosam quod natus similique minima unde incidunt? Voluptas ea
-        doloremque possimus! Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Eaque ipsam, ipsum similique repellendus odit officiis dignissimos
-        velit ducimus sit dicta repellat fuga optio quo debitis quibusdam nobis
-        fugit! Tenetur, adipisci. Lorem ipsum dolor, sit amet consectetur
-        adipisicing elit. Delectus accusantium assumenda tempora in aliquam
-        ullam culpa quis quae similique praesentium laboriosam quas nobis
-        voluptates, consectetur harum! Aliquid velit nobis eos? Lorem, ipsum
-        dolor sit amet consectetur adipisicing elit. Expedita, ullam vero
-        ducimus animi, tempore impedit dolorum quaerat minus provident
-        laboriosam quod natus similique minima unde incidunt? Voluptas ea
-        doloremque possimus! Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Eaque ipsam, ipsum similique repellendus odit officiis dignissimos
-        velit ducimus sit dicta repellat fuga optio quo debitis quibusdam nobis
-        fugit! Tenetur, adipisci. Lorem ipsum dolor, sit amet consectetur
-        adipisicing elit. Delectus accusantium assumenda tempora in aliquam
-        ullam culpa quis quae similique praesentium laboriosam quas nobis
-        voluptates, consectetur harum! Aliquid velit nobis eos? Lorem, ipsum
-        dolor sit amet consectetur adipisicing elit. Expedita, ullam vero
-        ducimus animi, tempore impedit dolorum quaerat minus provident
-        laboriosam quod natus similique minima unde incidunt? Voluptas ea
-        doloremque possimus! Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Eaque ipsam, ipsum similique repellendus odit officiis dignissimos
-        velit ducimus sit dicta repellat fuga optio quo debitis quibusdam nobis
-        fugit! Tenetur, adipisci.
+        fugit!
       </Container>
     </VStack>
   );

@@ -8,7 +8,6 @@ import { buttonStyles } from "./components/button";
 import { badgeStyles } from "./components/badge";
 import { linkStyles } from "./components/link";
 import { drawerStyles } from "./components/drawer";
-import { HomePageComponent } from "./additions/layout/HomePage";
 import { NavbarComponent } from "./additions/components/Navbar";
 
 export default extendTheme(
@@ -18,6 +17,5 @@ export default extendTheme(
   badgeStyles, // Badge styles
   linkStyles, // Link styles
   drawerStyles, // Sidebar variant for Chakra's drawer
-  HomePageComponent, // Main Panel component
   NavbarComponent // Main Panel component
 );

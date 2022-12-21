@@ -1,5 +1,5 @@
 import Hero from "@/components/Hero";
-import { Container, Divider, Flex } from "@chakra-ui/react";
+import { Container, Divider } from "@chakra-ui/react";
 
 const HomePage = () => {
   return (

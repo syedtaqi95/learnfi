@@ -11,13 +11,11 @@ import Title from "@/components/Title";
 
 const Hero = () => {
   return (
-    <VStack mt={{ base: "15vw", md: 28 }}>
+    <VStack>
       {/* Main heading and description */}
       <Title />
 
       <Container>
-        <br />
-        <br />
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus
         accusantium assumenda tempora in aliquam ullam culpa quis quae similique
         praesentium laboriosam quas nobis voluptates, consectetur harum! Aliquid

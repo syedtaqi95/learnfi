@@ -3,7 +3,7 @@ import { Container } from "@chakra-ui/react";
 
 const HomePage = () => {
   return (
-    <Container>
+    <Container maxW="75%">
       <Hero />
     </Container>
   );

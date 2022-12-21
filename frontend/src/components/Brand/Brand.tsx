@@ -17,7 +17,7 @@ const Brand = ({ variant }: { variant?: "dynamic" }) => {
         </Text>
         <Text as="span" color={secondSectionColor}>
           <Typed
-            strings={["Finance", "Investing", "Stocks"]}
+            strings={["Finance.", "Investing.", "Stocks."]}
             typeSpeed={100}
             backSpeed={100}
             backDelay={2000}

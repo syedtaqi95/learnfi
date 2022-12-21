@@ -12,7 +12,7 @@ const Brand = ({ variant }: { variant?: "dynamic" }) => {
         <Text as="span" color={firstSectionColor}>
           Learn{" "}
         </Text>
-        <Text as="span" display={{ base: "inline", lg: "none" }}>
+        <Text as="span" display={{ base: "inline", md: "none" }}>
           <br />
         </Text>
         <Text as="span" color={secondSectionColor}>

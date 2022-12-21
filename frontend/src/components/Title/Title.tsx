@@ -9,7 +9,7 @@ const Title = () => {
         mt={{ base: 8, md: 28 }}
         as="h1"
         w="100%"
-        fontSize={{ base: "48px", md: "100px" }}
+        fontSize={{ base: "48px", md: "70px", xl: "100px" }}
       >
         <Brand variant="dynamic" />
       </Heading>

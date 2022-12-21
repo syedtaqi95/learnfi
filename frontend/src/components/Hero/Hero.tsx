@@ -3,10 +3,9 @@ import Brand from "@/components/Brand";
 
 const Hero = () => {
   return (
-    <VStack>
+    <VStack mt={{ base: "40px", md: 36 }}>
       {/* Main heading */}
       <Heading
-        mt={{ base: 8, md: 28 }}
         as="h1"
         w="100%"
         fontSize={{ base: "48px", md: "70px", lg: "100px" }}
@@ -19,6 +18,7 @@ const Hero = () => {
         color={useColorModeValue("gray.500", "gray.400")}
         fontSize={{ base: "16px", md: "20px" }}
         pt={{ base: 2, md: 8 }}
+        textAlign="center"
       >
         LearnFi is a web-based platform that teaches beginners the basics of
         investing using a "learn-by-doing" approach. Take control of your

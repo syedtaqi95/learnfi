@@ -9,14 +9,16 @@ const Title = () => {
         mt={{ base: 8, md: 28 }}
         as="h1"
         w="100%"
-        fontSize={{ base: "48px", md: "70px", xl: "100px" }}
+        fontSize={{ base: "48px", md: "70px", lg: "100px" }}
       >
         <Brand variant="dynamic" />
       </Heading>
+
       {/* Title description */}
       <Box
         color={useColorModeValue("gray.500", "gray.400")}
         fontSize={{ base: "16px", md: "20px" }}
+        pt={{ base: 2, md: 8 }}
       >
         LearnFi is a web-based platform that teaches beginners the basics of
         investing using a "learn-by-doing" approach. Take control of your

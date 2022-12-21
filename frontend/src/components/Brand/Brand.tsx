@@ -12,9 +12,12 @@ const Brand = ({ variant }: { variant?: "dynamic" }) => {
         <Text as="span" color={firstSectionColor}>
           Learn{" "}
         </Text>
+        <Text as="span" display={{ base: "inline", md: "none" }}>
+          <br />
+        </Text>
         <Text as="span" color={secondSectionColor}>
           <Typed
-            strings={["Finance", "Investing", "Stocks"]}
+            strings={["Finance.", "Investing.", "Stocks."]}
             typeSpeed={100}
             backSpeed={100}
             backDelay={2000}

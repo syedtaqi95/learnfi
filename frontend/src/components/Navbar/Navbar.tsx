@@ -31,7 +31,7 @@ const Navbar = (props: { variant?: string; children?: any }) => {
   return (
     <Box as="nav" __css={styles}>
       {/* All viewports - Brand on the left */}
-      <Link ml={{base: "5vw", lg: 48}} href="/">
+      <Link ml={{ base: "5vw", lg: 48 }} href="/">
         <HStack>
           <Image
             boxSize={{ base: "24px", md: "48px" }}
@@ -45,7 +45,10 @@ const Navbar = (props: { variant?: string; children?: any }) => {
       </Link>
 
       {/* Desktop - website links on the right */}
-      <HStack mr={{base: "5vw", lg: 48}} display={{ base: "none", md: "initial" }}>
+      <HStack
+        mr={{ base: "5vw", lg: 48 }}
+        display={{ base: "none", md: "initial" }}
+      >
         <Button as="a" href={"/"} bg={bg}>
           Home
         </Button>

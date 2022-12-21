@@ -1,9 +1,9 @@
 import Hero from "@/components/Hero";
-import { Container } from "@chakra-ui/react";
+import { Container, Flex } from "@chakra-ui/react";
 
 const HomePage = () => {
   return (
-    <Container maxW="75%">
+    <Container maxW={{base:"85vw", lg:"958px"}}>
       <Hero />
     </Container>
   );

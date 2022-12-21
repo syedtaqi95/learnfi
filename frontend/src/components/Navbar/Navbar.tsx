@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Box,
   Flex,
@@ -13,9 +12,12 @@ import {
   useColorModeValue,
   Image,
   Link,
+  Text,
   useStyleConfig,
 } from "@chakra-ui/react";
 import { SunIcon, MoonIcon, HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import { FaGithub } from "react-icons/fa";
+import Brand from "../Brand";
 
 const Navbar = (props: { variant?: string; children?: any }) => {
   // Color mode utils
@@ -23,30 +25,39 @@ const Navbar = (props: { variant?: string; children?: any }) => {
   const bg = useColorModeValue("gray.50", "gray.800");
 
   // import style from theme
-  const { variant, children, ...rest } = props;
+  const { variant } = props;
   const styles = useStyleConfig("Navbar", { variant });
 
   return (
     <Box as="nav" __css={styles}>
       {/* All viewports - Brand on the left */}
-      <Link href="/">
+      <Link ml={{base: "5vw", lg: 48}} href="/">
         <HStack>
           <Image
             boxSize={{ base: "24px", md: "48px" }}
-            src="/logo.svg"
+            src="/logo.png"
             alt="Brand Icon"
           />
           <Box px={"3"} fontWeight="bold" fontSize={{ base: "md", md: "xl" }}>
-            LearnFi
+            <Brand />
           </Box>
         </HStack>
       </Link>
 
       {/* Desktop - website links on the right */}
-      <HStack display={{ base: "none", md: "initial" }}>
+      <HStack mr={{base: "5vw", lg: 48}} display={{ base: "none", md: "initial" }}>
         <Button as="a" href={"/"} bg={bg}>
           Home
         </Button>
+
+        <IconButton
+          as="a"
+          href="https://github.com/syedtaqi95/learnfi"
+          icon={<FaGithub />}
+          aria-label="Github link"
+          bg={bg}
+          target="_blank"
+        />
 
         {/* Color mode button */}
         <Button onClick={toggleColorMode} bg={bg}>
@@ -55,14 +66,14 @@ const Navbar = (props: { variant?: string; children?: any }) => {
       </HStack>
 
       {/* Mobile - dropdown menu */}
-      <Flex display={{ base: "initial", md: "none" }}>
+      <Flex mx={"5vw"} display={{ base: "initial", md: "none" }}>
         <Menu>
           {({ isOpen }) => (
             <>
               <MenuButton
                 as={IconButton}
                 aria-label="menu"
-                color="white"
+                bg={bg}
                 icon={
                   isOpen ? (
                     <CloseIcon
@@ -83,13 +94,9 @@ const Navbar = (props: { variant?: string; children?: any }) => {
                   Home
                 </MenuItem>
 
-                <MenuItem>
+                <MenuItem onClick={toggleColorMode}>
                   {/* Color mode button */}
-                  {colorMode === "light" ? (
-                    <MoonIcon onClick={toggleColorMode} />
-                  ) : (
-                    <SunIcon onClick={toggleColorMode} />
-                  )}
+                  {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
                 </MenuItem>
               </MenuList>
             </>

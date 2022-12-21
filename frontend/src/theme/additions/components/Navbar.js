@@ -2,9 +2,9 @@ const Navbar = {
   baseStyle: {
     py: 2,
     position: "sticky",
-    maxW: "95vw",
+    maxW: "100vw",
     margin: "auto",
-    top: "1",
+    top: "0",
     borderRadius: 15,
     backdropFilter: "auto",
     backdropBlur: "8px",

@@ -9,7 +9,7 @@ import { badgeStyles } from "./components/badge";
 import { linkStyles } from "./components/link";
 import { drawerStyles } from "./components/drawer";
 import { HomePageComponent } from "./additions/layout/HomePage";
-import { NavbarComponent } from "./additions/layout/Navbar";
+import { NavbarComponent } from "./additions/components/Navbar";
 
 export default extendTheme(
   { breakpoints }, // Breakpoints

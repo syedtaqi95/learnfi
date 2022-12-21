@@ -12,7 +12,7 @@ const Title = () => {
           md: "9xl",
         }}
       >
-        <Brand />
+        <Brand variant="dynamic"/>
       </Heading>
       {/* Title description */}
       <Container

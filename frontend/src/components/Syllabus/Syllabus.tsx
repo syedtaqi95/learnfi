@@ -31,6 +31,7 @@ const Syllabus = () => {
         textStyle={"list"}
         color={useColorModeValue("gray.500", "gray.400")}
         pt={{ base: 2, md: 4 }}
+        maxW="90%"
       >
         <List spacing={{base: 4, md: 2}}>
           <ListItem>

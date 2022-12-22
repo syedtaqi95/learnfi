@@ -28,9 +28,9 @@ const Hero = () => {
         color={useColorModeValue("gray.500", "gray.400")}
         pt={{ base: 2, md: 8 }}
       >
-        LearnFi is a web-based platform that uses a "learn-by-doing" approach to
-        teach beginners how to start investing like a pro. Sign up today and
-        start building a solid foundation for your financial success!
+        LearnFi is a free web-based platform that uses a "learn-by-doing"
+        approach to teach beginners how to start investing like a pro. Sign up
+        today and start building a solid foundation for your financial success!
       </Box>
 
       {/* Button links */}

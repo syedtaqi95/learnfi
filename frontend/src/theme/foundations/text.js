@@ -5,7 +5,7 @@ export const textStyles = {
       textAlign: "center",
     },
     list: {
-      fontSize: { base: "12px", md: "18px" },
+      fontSize: { base: "14px", md: "18px" },
     },
     section_heading: {
       fontSize: { base: "32px", lg: "56px" },

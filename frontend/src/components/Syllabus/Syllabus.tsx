@@ -32,7 +32,7 @@ const Syllabus = () => {
         color={useColorModeValue("gray.500", "gray.400")}
         pt={{ base: 2, md: 4 }}
       >
-        <List spacing={2}>
+        <List spacing={{base: 4, md: 2}}>
           <ListItem>
             💼 Understand the different types of investments and their risks and
             rewards

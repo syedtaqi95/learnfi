@@ -24,10 +24,9 @@ const Hero = () => {
 
       {/* Title description */}
       <Box
+        textStyle={"paragraph"}
         color={useColorModeValue("gray.500", "gray.400")}
-        fontSize={{ base: "16px", md: "20px" }}
         pt={{ base: 2, md: 8 }}
-        textAlign="center"
       >
         LearnFi is a web-based platform that uses a "learn-by-doing" approach to
         teach beginners how to start investing like a pro. Sign up today and

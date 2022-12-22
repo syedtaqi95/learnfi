@@ -1,12 +1,8 @@
-export const buttonStyles = {
-  components: {
-    Button: {
-      // 3. We can add a new visual variant
-      variants: {
-        "with-shadow": {
-          boxShadow: "0 0 2px 2px #efdfde",
-        },
-      },
-    },
-  },
+export const textStyles = {
+  textStyles: {
+    paragraph: {
+      fontSize: { base: "16px", md: "20px" },
+      textAlign: "center",
+    }
+  }
 };

@@ -16,7 +16,7 @@ import {
 } from "@chakra-ui/react";
 import { SunIcon, MoonIcon, HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { FaGithub } from "react-icons/fa";
-import Brand from "../Brand";
+import Brand from "@/components/Brand";
 
 const Navbar = (props: { variant?: string; children?: any }) => {
   // Color mode utils

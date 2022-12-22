@@ -12,7 +12,7 @@ import { FaGithub } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <VStack as="section" mt={{ base: "40px", md: 36 }}>
+    <VStack as="section" mt={{ base: "40px", md: 36 }} pb="80px">
       {/* Main heading */}
       <Heading
         as="h1"
@@ -24,14 +24,13 @@ const Hero = () => {
 
       {/* Title description */}
       <Box
+        textStyle={"paragraph"}
         color={useColorModeValue("gray.500", "gray.400")}
-        fontSize={{ base: "16px", md: "20px" }}
         pt={{ base: 2, md: 8 }}
-        textAlign="center"
       >
-        LearnFi is a web-based platform that uses a "learn-by-doing" approach to
-        teach beginners how to start investing like a pro. Sign up today and
-        start building a solid foundation for your financial success!
+        LearnFi is a free web-based platform that uses a "learn-by-doing"
+        approach to teach beginners how to start investing like a pro. Sign up
+        today and start building a solid foundation for your financial success!
       </Box>
 
       {/* Button links */}
@@ -55,7 +54,7 @@ const Hero = () => {
           h="64px"
           px="40px"
           maxW={{ base: "100%" }}
-          _hover={{ bg: "green.300" }}
+          _hover={{ bg: useColorModeValue("green.500", "green.300") }}
           fontSize={"20px"}
         >
           Get Started

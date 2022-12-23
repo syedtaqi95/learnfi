@@ -3,7 +3,7 @@ import Typed from "react-typed";
 
 const Brand = ({ variant }: { variant?: "dynamic" }) => {
   const firstSectionColor = useColorModeValue("green.500", "white");
-  const secondSectionColor = useColorModeValue("black", "green.500");
+  const secondSectionColor = useColorModeValue("black", "green.400");
 
   // Dynamic variant with typewriter effect
   if (variant === "dynamic") {

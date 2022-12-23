@@ -10,6 +10,7 @@ import Brand from "@/components/Brand";
 import { IoMdArrowForward } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
 import HomePageSection from "../HomePageSection";
+import TextBox from "../TextBox";
 
 const Hero = () => {
   return (
@@ -24,15 +25,11 @@ const Hero = () => {
       </Heading>
 
       {/* Title description */}
-      <Box
-        textStyle={"paragraph"}
-        color={useColorModeValue("gray.500", "gray.400")}
-        pt={{ base: 2, md: 8 }}
-      >
+      <TextBox>
         LearnFi is a free web-based platform that uses a "learn-by-doing"
         approach to teach beginners how to start investing like a pro. Sign up
         today and start building a solid foundation for your financial success!
-      </Box>
+      </TextBox>
 
       {/* Button links */}
       <Flex
@@ -49,7 +46,7 @@ const Hero = () => {
           href="/"
           rightIcon={<IoMdArrowForward />}
           color={useColorModeValue("gray.50", "gray.800")}
-          bg={useColorModeValue("green.500","green.400")}
+          bg={useColorModeValue("green.500", "green.400")}
           variant="solid"
           w={{ base: "100%", "2sm": "200px" }}
           h="64px"

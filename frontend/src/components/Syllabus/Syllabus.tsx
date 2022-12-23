@@ -22,8 +22,8 @@ const Syllabus = () => {
       >
         We'll cover the basics of investing and provide you with the knowledge
         and skills you need to make informed decisions about your money. By the
-        end of the course, you'll have a solid foundation in investing and be
-        well on your way to becoming an investing pro.
+        end, you'll have a solid foundation in investing and be well on your way
+        to becoming an investing pro.
       </Box>
 
       {/* Syllabus list */}
@@ -33,7 +33,7 @@ const Syllabus = () => {
         pt={{ base: 2, md: 4 }}
         maxW="90%"
       >
-        <List spacing={{base: 4, md: 2}}>
+        <List spacing={{ base: 4, md: 2 }}>
           <ListItem>
             💼 Understand the different types of investments and their risks and
             rewards

@@ -1,11 +1,4 @@
-import {
-  Box,
-  Heading,
-  VStack,
-  useColorModeValue,
-  Flex,
-  Button,
-} from "@chakra-ui/react";
+import { Heading, useColorModeValue, Flex, Button } from "@chakra-ui/react";
 import Brand from "@/components/Brand";
 import { IoMdArrowForward } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";

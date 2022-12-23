@@ -1,12 +1,5 @@
-import {
-  Heading,
-  Box,
-  VStack,
-  useColorModeValue,
-  List,
-  ListItem,
-} from "@chakra-ui/react";
 import HomePageSection from "@/components/HomePageSection";
+import { Heading, List, ListItem } from "@chakra-ui/react";
 import TextBox from "../TextBox";
 
 const Syllabus = () => {

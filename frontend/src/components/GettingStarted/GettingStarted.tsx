@@ -1,4 +1,4 @@
-import { VStack, Heading } from "@chakra-ui/react";
+import { Heading } from "@chakra-ui/react";
 import HomePageSection from "@/components/HomePageSection";
 
 const GettingStarted = () => {

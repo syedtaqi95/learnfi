@@ -3,7 +3,7 @@ import HomePageSection from "@/components/HomePageSection";
 
 const GettingStarted = () => {
   return (
-    <HomePageSection>
+    <HomePageSection variant="section">
       <Heading as="h2" textStyle={"section_heading"}>
         Getting Started
       </Heading>

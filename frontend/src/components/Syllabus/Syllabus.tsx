@@ -10,7 +10,7 @@ import HomePageSection from "@/components/HomePageSection";
 
 const Syllabus = () => {
   return (
-    <HomePageSection>
+    <HomePageSection variant="section">
       <Heading as="h2" textStyle={"section_heading"}>
         What you will learn
       </Heading>

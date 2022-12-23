@@ -9,10 +9,11 @@ import {
 import Brand from "@/components/Brand";
 import { IoMdArrowForward } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
+import HomePageSection from "../HomePageSection";
 
 const Hero = () => {
   return (
-    <VStack as="section" mt={{ base: "40px", md: 36 }} pb="80px">
+    <HomePageSection variant="hero">
       {/* Main heading */}
       <Heading
         as="h1"
@@ -79,7 +80,7 @@ const Hero = () => {
           GitHub
         </Button>
       </Flex>
-    </VStack>
+    </HomePageSection>
   );
 };
 

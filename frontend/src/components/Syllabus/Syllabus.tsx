@@ -11,7 +11,7 @@ const Syllabus = () => {
   return (
     <VStack as="section" pt="48px" pb="32px">
       <Heading as="h2" textStyle={"section_heading"}>
-        What will you learn?
+        What you will learn
       </Heading>
 
       {/* Syllabus summary */}

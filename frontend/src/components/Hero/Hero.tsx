@@ -48,13 +48,13 @@ const Hero = () => {
           href="/"
           rightIcon={<IoMdArrowForward />}
           color={useColorModeValue("gray.50", "gray.800")}
-          bg={"green.400"}
+          bg={useColorModeValue("green.500","green.400")}
           variant="solid"
           w={{ base: "100%", "2sm": "200px" }}
           h="64px"
           px="40px"
           maxW={{ base: "100%" }}
-          _hover={{ bg: useColorModeValue("green.500", "green.300") }}
+          _hover={{ bg: useColorModeValue("green.600", "green.300") }}
           fontSize={"20px"}
         >
           Get Started

@@ -10,6 +10,6 @@ export const textStyles = {
     section_heading: {
       fontSize: { base: "32px", lg: "56px" },
       textAlign: "center",
-    }
-  }
+    },
+  },
 };

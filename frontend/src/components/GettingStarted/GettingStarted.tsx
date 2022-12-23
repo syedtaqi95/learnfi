@@ -1,12 +1,13 @@
 import { VStack, Heading } from "@chakra-ui/react";
+import HomePageSection from "@/components/HomePageSection";
 
 const GettingStarted = () => {
   return (
-    <VStack as="section" pt="48px" pb="32px">
+    <HomePageSection>
       <Heading as="h2" textStyle={"section_heading"}>
         Getting Started
       </Heading>
-    </VStack>
+    </HomePageSection>
   );
 };
 

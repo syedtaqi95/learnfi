@@ -6,10 +6,11 @@ import {
   List,
   ListItem,
 } from "@chakra-ui/react";
+import HomePageSection from "@/components/HomePageSection";
 
 const Syllabus = () => {
   return (
-    <VStack as="section" pt="48px" pb="32px">
+    <HomePageSection>
       <Heading as="h2" textStyle={"section_heading"}>
         What you will learn
       </Heading>
@@ -54,7 +55,7 @@ const Syllabus = () => {
           </ListItem>
         </List>
       </Box>
-    </VStack>
+    </HomePageSection>
   );
 };
 

@@ -1,6 +1,6 @@
 import HomePageSection from "@/components/HomePageSection";
 import { Heading, List, ListItem } from "@chakra-ui/react";
-import TextBox from "../TextBox";
+import TextBox from "@/components/TextBox";
 
 const Syllabus = () => {
   return (
@@ -18,7 +18,7 @@ const Syllabus = () => {
       </TextBox>
 
       {/* Syllabus list */}
-      <TextBox>
+      <TextBox styles={{ textStyle: "list", maxW: "90%" }}>
         <List spacing={{ base: 4, md: 2 }}>
           <ListItem>
             💼 Understand the different types of investments and their risks and

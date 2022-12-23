@@ -3,12 +3,16 @@ import React from "react";
 
 interface PropTypes {
   children: React.ReactNode;
+  styles?: Object;
 }
 
-const TextBox = ({ children }: PropTypes) => {
+const TextBox = ({
+  children,
+  styles = { textStyle: "paragraph" },
+}: PropTypes) => {
   return (
     <Box
-      textStyle={"paragraph"}
+      {...styles}
       color={useColorModeValue("gray.500", "gray.400")}
       pt={{ base: 2, md: 8 }}
     >

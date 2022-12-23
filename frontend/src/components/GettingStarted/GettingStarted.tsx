@@ -1,7 +1,13 @@
-import React from "react";
+import { VStack, Heading } from "@chakra-ui/react";
 
 const GettingStarted = () => {
-  return <div>GettingStarted</div>;
+  return (
+    <VStack as="section" pt="48px" pb="32px">
+      <Heading as="h2" textStyle={"section_heading"}>
+        Getting Started
+      </Heading>
+    </VStack>
+  );
 };
 
 export default GettingStarted;

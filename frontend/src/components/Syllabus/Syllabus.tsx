@@ -1,39 +1,25 @@
-import {
-  Heading,
-  Box,
-  VStack,
-  useColorModeValue,
-  List,
-  ListItem,
-} from "@chakra-ui/react";
+import HomePageSection from "@/components/HomePageSection";
+import { Heading, List, ListItem } from "@chakra-ui/react";
+import TextBox from "@/components/TextBox";
 
 const Syllabus = () => {
   return (
-    <VStack as="section" pt="48px" pb="32px">
+    <HomePageSection variant="section">
       <Heading as="h2" textStyle={"section_heading"}>
-        What will you learn?
+        What you will learn
       </Heading>
 
       {/* Syllabus summary */}
-      <Box
-        textStyle={"paragraph"}
-        color={useColorModeValue("gray.500", "gray.400")}
-        pt={{ base: 2, md: 8 }}
-      >
+      <TextBox>
         We'll cover the basics of investing and provide you with the knowledge
         and skills you need to make informed decisions about your money. By the
-        end of the course, you'll have a solid foundation in investing and be
-        well on your way to becoming an investing pro.
-      </Box>
+        end, you'll have a solid foundation in investing and be well on your way
+        to becoming an investing pro.
+      </TextBox>
 
       {/* Syllabus list */}
-      <Box
-        textStyle={"list"}
-        color={useColorModeValue("gray.500", "gray.400")}
-        pt={{ base: 2, md: 4 }}
-        maxW="90%"
-      >
-        <List spacing={{base: 4, md: 2}}>
+      <TextBox styles={{ textStyle: "list", maxW: "90%" }}>
+        <List spacing={{ base: 4, md: 2 }}>
           <ListItem>
             💼 Understand the different types of investments and their risks and
             rewards
@@ -53,8 +39,8 @@ const Syllabus = () => {
             🎯 Understand the importance of financial planning and goal setting
           </ListItem>
         </List>
-      </Box>
-    </VStack>
+      </TextBox>
+    </HomePageSection>
   );
 };
 

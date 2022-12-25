@@ -1,5 +1,4 @@
 import HomePageSection from "@/components/HomePageSection";
-import TextBox from "@/components/TextBox";
 import Brand from "@/components/Brand";
 import { HStack, Image, Box, useColorModeValue } from "@chakra-ui/react";
 
@@ -8,7 +7,7 @@ const Footer = () => {
     <HomePageSection variant="footer">
       <HStack w="100%">
         <Image
-          boxSize={{ base: "24px", md: "48px" }}
+          boxSize={{ base: "24px", md: "36px" }}
           src="/logo.png"
           alt="Brand Icon"
         />
@@ -23,8 +22,8 @@ const Footer = () => {
         fontSize="14px"
         mt={4}
       >
-        Built with React and Chakra UI
-        <br />© Syed Taqi Haider. All rights reserved.
+        Built with React and Chakra UI. Created by Syed Taqi Haider.
+        <br />© LearnFi. All rights reserved.
       </Box>
     </HomePageSection>
   );

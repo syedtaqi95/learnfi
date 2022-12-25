@@ -11,18 +11,18 @@ import HomePageSection from "@/components/HomePageSection";
 const GettingStarted = () => {
   const cardStyles = {
     fontSize: { base: "20px", md: "28px" },
-    bg: useColorModeValue("green.500", "green.400"),
+    bg: useColorModeValue("gray.200", "gray.700"),
   };
 
   const cardHeaderStyles = {
-    fontWeight: "semibold",
-    color: useColorModeValue("white", "gray.800"),
+    fontWeight: "medium",
+    color: useColorModeValue("gray.800", "gray.50"),
   };
 
   const cardBodyStyles = {
     align: "start",
     fontSize: { base: "16px", md: "20px" },
-    color: useColorModeValue("white", "gray.800"),
+    color: useColorModeValue("gray.500", "gray.400"),
   };
 
   return (

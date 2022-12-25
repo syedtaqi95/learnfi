@@ -33,7 +33,6 @@ const Syllabus = () => {
           <ListItem>
             📈 Learn about common investing strategies and how to apply them
           </ListItem>
-
           <ListItem>🔬 Learn how to research and evaluate investments</ListItem>
           <ListItem>
             🎯 Understand the importance of financial planning and goal setting

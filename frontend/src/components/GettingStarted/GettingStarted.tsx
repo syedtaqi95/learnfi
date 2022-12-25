@@ -1,24 +1,29 @@
 import {
   Heading,
-  Text,
   Card,
   SimpleGrid,
   CardBody,
   useColorModeValue,
+  CardHeader,
 } from "@chakra-ui/react";
 import HomePageSection from "@/components/HomePageSection";
-import TextBox from "@/components/TextBox";
 
 const GettingStarted = () => {
   const cardStyles = {
-    boxShadow: `0 0 14px var(--chakra-colors-${useColorModeValue(
-      "gray-500",
-      "green-400"
-    )})`,
     fontSize: { base: "20px", md: "28px" },
+    bg: useColorModeValue("green.500", "green.400"),
   };
 
-  const textBoxStyles = { textAlign: "start", textStyle: "paragraph" };
+  const cardHeaderStyles = {
+    fontWeight: "semibold",
+    color: useColorModeValue("white", "gray.800"),
+  };
+
+  const cardBodyStyles = {
+    align: "start",
+    fontSize: { base: "16px", md: "20px" },
+    color: useColorModeValue("white", "gray.800"),
+  };
 
   return (
     <HomePageSection variant="section">
@@ -34,28 +39,23 @@ const GettingStarted = () => {
         maxW="100%"
       >
         <Card {...cardStyles}>
-          <CardBody>
-            <Text>1 Create an account</Text>
-            <TextBox styles={textBoxStyles}>
-              Sign up using a username and password or your email address
-            </TextBox>
+          <CardHeader {...cardHeaderStyles}>1 Create an account</CardHeader>
+          <CardBody {...cardBodyStyles}>
+            Sign up using a username and password or your email address
           </CardBody>
         </Card>
+
         <Card {...cardStyles}>
-          <CardBody>
-            <Text>2 Explore the topics</Text>
-            <TextBox styles={textBoxStyles}>
-              Work through the sections at your own pace
-            </TextBox>
+          <CardHeader {...cardHeaderStyles}>2 Explore the topics</CardHeader>
+          <CardBody {...cardBodyStyles}>
+            Work through the sections at your own pace
           </CardBody>
         </Card>
+
         <Card {...cardStyles}>
-          <CardBody>
-            <Text>3 Apply your learning</Text>
-            <TextBox styles={textBoxStyles}>
-              Use our platform to apply what you have learned to your investing
-              endeavours
-            </TextBox>
+          <CardHeader {...cardHeaderStyles}>3 Apply your learning</CardHeader>
+          <CardBody {...cardBodyStyles}>
+            Use our platform to apply what you have learned
           </CardBody>
         </Card>
       </SimpleGrid>

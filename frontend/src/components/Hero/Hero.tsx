@@ -1,4 +1,4 @@
-import { Heading, useColorModeValue, Flex, Button } from "@chakra-ui/react";
+import { Heading, useColorModeValue, Flex, Button, As } from "@chakra-ui/react";
 import Brand from "@/components/Brand";
 import { IoMdArrowForward } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
@@ -7,7 +7,7 @@ import TextBox from "@/components/TextBox";
 
 const Hero = () => {
   const commonButtonStyles = {
-    as: "a",
+    as: "a" as any,
     variant: "solid",
     w: { base: "100%", "2sm": "200px" },
     h: "64px",

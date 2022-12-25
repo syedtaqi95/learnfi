@@ -1,6 +1,7 @@
-import GettingStarted from "@/components/GettingStarted";
 import Hero from "@/components/Hero";
 import Syllabus from "@/components/Syllabus";
+import GettingStarted from "@/components/GettingStarted";
+import Footer from "@/components/Footer";
 import { Container, Divider } from "@chakra-ui/react";
 
 const HomePage = () => {
@@ -10,6 +11,8 @@ const HomePage = () => {
       <Divider />
       <Syllabus />
       <GettingStarted />
+      <Divider />
+      <Footer />
     </Container>
   );
 };

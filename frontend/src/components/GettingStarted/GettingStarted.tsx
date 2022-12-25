@@ -12,6 +12,7 @@ const GettingStarted = () => {
   const cardStyles = {
     fontSize: { base: "20px", md: "28px" },
     bg: useColorModeValue("gray.200", "gray.700"),
+    borderRadius: "10px",
   };
 
   const cardHeaderStyles = {

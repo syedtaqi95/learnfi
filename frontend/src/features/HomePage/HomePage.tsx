@@ -7,7 +7,7 @@ import Contact from "@/components/Contact";
 
 const HomePage = () => {
   return (
-    <Container as="main" maxW={{ base: "85vw", lg: "958px" }}>
+    <Container as="main" maxW={{ base: "90vw", lg: "80vw" }}>
       <Hero />
       <Divider />
       <Syllabus />

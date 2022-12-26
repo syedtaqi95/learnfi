@@ -9,7 +9,6 @@ import { buttonStyles } from "./components/button";
 import { badgeStyles } from "./components/badge";
 import { linkStyles } from "./components/link";
 import { drawerStyles } from "./components/drawer";
-import { NavbarComponent } from "./additions/components/Navbar";
 
 export default extendTheme(
   { breakpoints }, // Breakpoints
@@ -19,5 +18,4 @@ export default extendTheme(
   badgeStyles, // Badge styles
   linkStyles, // Link styles
   drawerStyles, // Sidebar variant for Chakra's drawer
-  NavbarComponent // Main Panel component
 );

@@ -11,43 +11,50 @@ import {
   Button,
   useColorModeValue,
   Image,
-  Link,
-  useStyleConfig,
 } from "@chakra-ui/react";
 import { SunIcon, MoonIcon, HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { FaGithub } from "react-icons/fa";
 import Brand from "@/components/Brand";
+import { Link } from "react-router-dom";
 
-const Navbar = (props: { variant?: string; children?: any }) => {
+const Navbar = () => {
   // Color mode utils
   const { colorMode, toggleColorMode } = useColorMode();
   const bg = useColorModeValue("gray.50", "gray.800");
 
   // import style from theme
-  const { variant } = props;
-  const styles = useStyleConfig("Navbar", { variant });
+  const navBarStyles = {
+    as: "nav" as any,
+    py: 2,
+    px: { base: 4, md: 16 },
+    position: "sticky" as any,
+    maxW: "100%",
+    top: "0",
+    backdropFilter: "auto",
+    backdropBlur: "8px",
+    zIndex: "overlay",
+    display: "flex",
+    justifyContent: "space-between",
+  };
 
   return (
-    <Box as="nav" __css={styles}>
+    <Box {...navBarStyles} maxW={"100%"}>
       {/* All viewports - Brand on the left */}
-      <Link ml={{ base: "5vw", lg: 48 }} href="/">
+      <Link to="/">
         <HStack>
           <Image
             boxSize={{ base: "24px", md: "48px" }}
             src="/logo.png"
             alt="Brand Icon"
           />
-          <Box px={"3"} fontWeight="bold" fontSize={{ base: "md", md: "xl" }}>
+          <Box as="span" fontWeight="bold" fontSize={{ base: "md", md: "xl" }}>
             <Brand />
           </Box>
         </HStack>
       </Link>
 
       {/* Desktop - website links on the right */}
-      <HStack
-        mr={{ base: "5vw", lg: 48 }}
-        display={{ base: "none", md: "initial" }}
-      >
+      <HStack display={{ base: "none", md: "initial" }}>
         <Button as="a" href={"/"} bg={bg}>
           Home
         </Button>
@@ -68,7 +75,7 @@ const Navbar = (props: { variant?: string; children?: any }) => {
       </HStack>
 
       {/* Mobile - dropdown menu */}
-      <Flex mx={"5vw"} display={{ base: "initial", md: "none" }}>
+      <Flex display={{ base: "initial", md: "none" }}>
         <Menu>
           {({ isOpen }) => (
             <>

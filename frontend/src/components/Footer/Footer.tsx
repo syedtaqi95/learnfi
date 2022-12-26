@@ -23,7 +23,7 @@ const Footer = () => {
         mt={4}
       >
         Built with React and Chakra UI. Created by Syed Taqi Haider.
-        <br />© LearnFi. All rights reserved.
+        <br />© LearnFi 2022
       </Box>
     </HomePageSection>
   );

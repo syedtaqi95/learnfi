@@ -17,5 +17,5 @@ export default extendTheme(
   buttonStyles, // Button styles
   badgeStyles, // Badge styles
   linkStyles, // Link styles
-  drawerStyles, // Sidebar variant for Chakra's drawer
+  drawerStyles // Sidebar variant for Chakra's drawer
 );

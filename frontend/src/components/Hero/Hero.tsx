@@ -1,4 +1,4 @@
-import { Heading, useColorModeValue, Flex, Button } from "@chakra-ui/react";
+import { Heading, useColorModeValue, Flex, Button, As } from "@chakra-ui/react";
 import Brand from "@/components/Brand";
 import { IoMdArrowForward } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
@@ -6,6 +6,16 @@ import HomePageSection from "@/components/HomePageSection";
 import TextBox from "@/components/TextBox";
 
 const Hero = () => {
+  const commonButtonStyles = {
+    as: "a" as any,
+    variant: "solid",
+    w: { base: "100%", "2sm": "200px" },
+    h: "64px",
+    px: "40px",
+    maxW: "100%",
+    fontSize: "20px",
+  };
+
   return (
     <HomePageSection variant="hero">
       {/* Main heading */}
@@ -35,37 +45,25 @@ const Hero = () => {
       >
         {/* Get Started button */}
         <Button
-          as="a"
+          {...commonButtonStyles}
           href="/"
           rightIcon={<IoMdArrowForward />}
           color={useColorModeValue("gray.50", "gray.800")}
           bg={useColorModeValue("green.500", "green.400")}
-          variant="solid"
-          w={{ base: "100%", "2sm": "200px" }}
-          h="64px"
-          px="40px"
-          maxW={{ base: "100%" }}
           _hover={{ bg: useColorModeValue("green.600", "green.300") }}
-          fontSize={"20px"}
         >
           Get Started
         </Button>
 
         {/* GitHub button */}
         <Button
-          as="a"
+          {...commonButtonStyles}
           href="https://github.com/syedtaqi95/learnfi"
           target={"_blank"}
           leftIcon={<FaGithub />}
           color={useColorModeValue("gray.800", "gray.50")}
           bg={useColorModeValue("gray.200", "gray.700")}
-          variant="solid"
-          w={{ base: "100%", "2sm": "200px" }}
-          h="64px"
-          px="40px"
-          maxW={{ base: "100%" }}
           _hover={{ bg: useColorModeValue("gray.300", "gray.600") }}
-          fontSize={"20px"}
         >
           GitHub
         </Button>

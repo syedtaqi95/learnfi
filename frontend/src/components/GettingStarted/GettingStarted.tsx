@@ -15,11 +15,14 @@ const GettingStarted = () => {
     bg: useColorModeValue("gray.200", "gray.700"),
     borderRadius: "10px",
     maxW: "300px",
+    boxShadow: `0 0 20px var(--chakra-colors-${useColorModeValue(
+      "gray-400",
+      "black"
+    )})`,
   };
 
   const imageStyles = {
-    borderTopLeftRadius: "10px",
-    borderTopRightRadius: "10px",
+    borderTopRadius: "10px",
   };
 
   const cardHeaderStyles = {

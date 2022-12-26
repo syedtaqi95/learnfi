@@ -55,9 +55,9 @@ const Navbar = () => {
 
       {/* Desktop - website links on the right */}
       <HStack display={{ base: "none", md: "initial" }}>
-        <Button as="a" href={"/"} bg={bg}>
-          Home
-        </Button>
+        <Link to="/">
+          <Button bg={bg}>Home</Button>
+        </Link>
 
         <IconButton
           as="a"
@@ -99,9 +99,11 @@ const Navbar = () => {
                 id="1"
               />
               <MenuList>
-                <MenuItem as="a" href="/">
-                  Home
-                </MenuItem>
+                <Link to="/">
+                  <MenuItem as="a" href="/">
+                    Home
+                  </MenuItem>
+                </Link>
 
                 <MenuItem onClick={toggleColorMode}>
                   {/* Color mode button */}

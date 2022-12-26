@@ -1,5 +1,5 @@
 import HomePage from "@/routes/HomePage";
-import Navbar from "@/components/Navbar";
+import LoginPage from "@/routes/LoginPage";
 import ErrorPage from "@/routes/ErrorPage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -10,6 +10,15 @@ const router = createBrowserRouter([
     element: (
       <>
         <HomePage />
+      </>
+    ),
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "signup",
+    element: (
+      <>
+        <LoginPage />
       </>
     ),
     errorElement: <ErrorPage />,

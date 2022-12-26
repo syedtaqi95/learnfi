@@ -13,8 +13,8 @@ const HomePage = () => {
       <Container as="main" maxW={{ base: "90vw", lg: "80vw" }}>
         <Hero />
         <Divider />
-        <Syllabus />
         <GettingStarted />
+        <Syllabus />
         <Contact />
         <Divider />
         <Footer />

@@ -100,7 +100,7 @@ const Navbar = () => {
               />
               <MenuList>
                 <Link to="/">
-                  <MenuItem as="a" href="/">
+                  <MenuItem>
                     Home
                   </MenuItem>
                 </Link>

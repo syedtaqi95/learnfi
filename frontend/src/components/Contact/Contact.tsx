@@ -19,7 +19,7 @@ const Contact = () => {
 
   return (
     <HomePageSection variant="section">
-      <Heading as="h2" textStyle={"section_heading"}>
+      <Heading as="h2">
         Get in touch
       </Heading>
 

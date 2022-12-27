@@ -38,7 +38,7 @@ const GettingStarted = () => {
 
   return (
     <HomePageSection variant="section">
-      <Heading as="h2" textStyle={"section_heading"}>
+      <Heading as="h2">
         Getting Started
       </Heading>
 

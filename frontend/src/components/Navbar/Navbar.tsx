@@ -33,12 +33,12 @@ const Navbar = () => {
     backdropFilter: "auto",
     backdropBlur: "8px",
     zIndex: "overlay",
-    display: "flex",
     justifyContent: "space-between",
+    alignItems: "center"
   };
 
   return (
-    <Box {...navBarStyles} maxW={"100%"}>
+    <Flex {...navBarStyles} maxW={"100%"}>
       {/* All viewports - Brand on the left */}
       <Link to="/">
         <HStack>
@@ -114,7 +114,7 @@ const Navbar = () => {
           )}
         </Menu>
       </Flex>
-    </Box>
+    </Flex>
   );
 };
 

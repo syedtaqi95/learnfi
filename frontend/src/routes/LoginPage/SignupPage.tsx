@@ -25,7 +25,7 @@ const LoginPage = () => {
         maxW={{ base: "90vw", lg: "80vw" }}
       >
         <VStack>
-          <Heading as="h2" mt="100px" mb="24px">
+          <Heading as="h2" mt={{ base: "100px", md: "15vh" }} mb="24px">
             Sign up
           </Heading>
 
@@ -37,6 +37,7 @@ const LoginPage = () => {
             {/* Email address */}
             <FormControl {...formControlStyles}>
               <Input
+                isRequired
                 borderColor={useColorModeValue("gray.500", "gray.400")}
                 type="email"
                 name="email"
@@ -47,6 +48,7 @@ const LoginPage = () => {
             {/* Password */}
             <FormControl {...formControlStyles}>
               <Input
+                isRequired
                 borderColor={useColorModeValue("gray.500", "gray.400")}
                 type="password"
                 name="password"
@@ -55,7 +57,14 @@ const LoginPage = () => {
             </FormControl>
 
             {/* Submit button */}
-            <Button  loadingText="Submitting...">
+            <Button
+              type="submit"
+              w="100%"
+              bg={useColorModeValue("gray.200", "gray.700")}
+              _hover={{bg: useColorModeValue("gray.300", "gray.600")}}
+              loadingText="Submitting..."
+              isDisabled={true}
+            >
               Submit
             </Button>
           </Form>

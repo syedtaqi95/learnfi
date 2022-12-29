@@ -1,5 +1,5 @@
 import HomePage from "@/routes/HomePage";
-import LoginPage from "@/routes/LoginPage";
+import LoginPage from "@/routes/SignupPage";
 import ErrorPage from "@/routes/ErrorPage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 

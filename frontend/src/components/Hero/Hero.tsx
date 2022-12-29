@@ -43,7 +43,7 @@ const Hero = () => {
         gap={4}
         wrap="wrap"
       >
-        {/* Get Started button */}
+        {/* Sign up button */}
         <Link to="signup">
           <Button
             {...commonButtonStyles}

@@ -34,7 +34,7 @@ const Navbar = () => {
     backdropBlur: "8px",
     zIndex: "overlay",
     justifyContent: "space-between",
-    alignItems: "center"
+    alignItems: "center",
   };
 
   return (
@@ -100,9 +100,7 @@ const Navbar = () => {
               />
               <MenuList>
                 <Link to="/">
-                  <MenuItem>
-                    Home
-                  </MenuItem>
+                  <MenuItem>Home</MenuItem>
                 </Link>
 
                 <MenuItem onClick={toggleColorMode}>

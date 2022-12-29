@@ -19,9 +19,7 @@ const Contact = () => {
 
   return (
     <HomePageSection variant="section">
-      <Heading as="h2">
-        Get in touch
-      </Heading>
+      <Heading as="h2">Get in touch</Heading>
 
       <TextBox>
         Thank you for visiting LearnFi! We are always happy to hear from our

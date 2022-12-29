@@ -5,9 +5,7 @@ import TextBox from "@/components/TextBox";
 const Syllabus = () => {
   return (
     <HomePageSection variant="section">
-      <Heading as="h2">
-        What you will learn
-      </Heading>
+      <Heading as="h2">What you will learn</Heading>
 
       {/* Syllabus summary */}
       <TextBox>

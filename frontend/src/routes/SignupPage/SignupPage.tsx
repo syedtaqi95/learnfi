@@ -3,7 +3,7 @@ import { Button, Container, Text, Heading, VStack } from "@chakra-ui/react";
 import { FcGoogle } from "react-icons/fc";
 import SignupForm from "@/components/SignupForm";
 
-const LoginPage = () => {
+const SignupPage = () => {
   return (
     <>
       <Navbar />
@@ -26,4 +26,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default SignupPage;

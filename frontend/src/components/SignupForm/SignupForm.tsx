@@ -1,21 +1,46 @@
-import { Form } from "react-router-dom";
+import { Form, useActionData } from "react-router-dom";
 import { useState } from "react";
 import {
   Button,
   FormControl,
+  FormHelperText,
   Input,
   InputGroup,
   InputRightElement,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { ActionFunction, redirect } from "react-router-dom";
+
+// Action triggered when user submits form
+export const action: ActionFunction = async ({ request }) => {
+  const formData = await request.formData();
+  const email = formData.get("email");
+  const password = formData.get("password");
+  const errors: { email?: string; password?: string } = {};
+
+  // validate the fields
+  if (typeof email !== "string" || !email.includes("@")) {
+    errors.email = "Enter a valid email address";
+  }
+
+  if (typeof password !== "string" || password.length < 6) {
+    errors.password = "Password must be greater than 6 characters";
+  }
+
+  // return data if we have errors
+  if (Object.keys(errors).length) {
+    return errors;
+  }
+
+  return redirect("/");
+};
 
 const SignupForm = () => {
   // Password show/hide button
   const [showPassword, setShowPassword] = useState(false);
   const handlePasswordButton = () => setShowPassword(!showPassword);
 
-  // Loading state
-  const [isLoading, setLoading] = useState(false);
+  const errors = useActionData() as { email?: string; password?: string };
 
   // Form field styles
   const formControlStyles = {
@@ -27,12 +52,14 @@ const SignupForm = () => {
       {/* Email address */}
       <FormControl {...formControlStyles}>
         <Input
+          autoFocus
           isRequired
           borderColor={useColorModeValue("gray.500", "gray.400")}
           type="email"
           name="email"
           placeholder="Email"
         />
+        {errors?.email ? <FormHelperText>{errors.email}</FormHelperText> : null}
       </FormControl>
 
       {/* Password */}
@@ -62,16 +89,11 @@ const SignupForm = () => {
             </Button>
           </InputRightElement>
         </InputGroup>
+        {errors?.password && <FormHelperText>{errors.password}</FormHelperText>}
       </FormControl>
 
       {/* Submit button */}
-      <Button
-        variant="smallButton"
-        type="submit"
-        w="100%"
-        loadingText="Submitting..."
-        isLoading={isLoading}
-      >
+      <Button variant="smallButton" type="submit" w="100%">
         Submit
       </Button>
     </Form>

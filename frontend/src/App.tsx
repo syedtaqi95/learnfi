@@ -1,5 +1,6 @@
 import HomePage from "@/routes/HomePage";
-import LoginPage from "@/routes/SignupPage";
+import SignupPage from "@/routes/SignupPage";
+import { action as signupAction } from "@/components/SignupForm";
 import ErrorPage from "@/routes/ErrorPage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -12,8 +13,9 @@ const router = createBrowserRouter([
   },
   {
     path: "signup",
-    element: <LoginPage />,
+    element: <SignupPage />,
     errorElement: <ErrorPage />,
+    action: signupAction,
   },
 ]);
 

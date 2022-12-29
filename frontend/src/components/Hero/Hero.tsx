@@ -4,10 +4,10 @@ import { IoMdArrowForward } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
 import HomePageSection from "@/components/HomePageSection";
 import TextBox from "@/components/TextBox";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const commonButtonStyles = {
-    as: "a" as any,
     variant: "solid",
     w: { base: "100%", "2sm": "200px" },
     h: "64px",
@@ -43,21 +43,23 @@ const Hero = () => {
         gap={4}
         wrap="wrap"
       >
-        {/* Get Started button */}
-        <Button
-          {...commonButtonStyles}
-          href="/"
-          rightIcon={<IoMdArrowForward />}
-          color={useColorModeValue("gray.50", "gray.800")}
-          bg={useColorModeValue("green.500", "green.400")}
-          _hover={{ bg: useColorModeValue("green.600", "green.300") }}
-        >
-          Get Started
-        </Button>
+        {/* Sign up button */}
+        <Link to="signup">
+          <Button
+            {...commonButtonStyles}
+            rightIcon={<IoMdArrowForward />}
+            color={useColorModeValue("gray.50", "gray.800")}
+            bg={useColorModeValue("green.500", "green.400")}
+            _hover={{ bg: useColorModeValue("green.600", "green.300") }}
+          >
+            Sign Up
+          </Button>
+        </Link>
 
         {/* GitHub button */}
         <Button
           {...commonButtonStyles}
+          as="a"
           href="https://github.com/syedtaqi95/learnfi"
           target={"_blank"}
           leftIcon={<FaGithub />}

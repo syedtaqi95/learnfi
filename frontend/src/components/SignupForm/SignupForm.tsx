@@ -1,4 +1,3 @@
-import { Form, useActionData } from "react-router-dom";
 import { useState } from "react";
 import {
   Button,
@@ -10,52 +9,72 @@ import {
   useColorModeValue,
   Text,
 } from "@chakra-ui/react";
-import { ActionFunction, redirect } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 
-// Action triggered when on submitting form
-export const action: ActionFunction = async ({ request }) => {
-  // Retrieve form fields
-  const formData = await request.formData();
-  const email = formData.get("email");
-  const password = formData.get("password");
-  const errors: { email?: string; password?: string } = {};
-
-  // Validate the fields
-  if (typeof email !== "string" || !email.includes("@")) {
-    errors.email = "Enter a valid email address";
-  }
-
-  if (typeof password !== "string" || password.length < 6) {
-    errors.password = "Password must be greater than 6 characters";
-  }
-
-  // Return data if we have errors
-  if (Object.keys(errors).length) {
-    return errors;
-  }
-
-  // Redirect to home page
-  return redirect("/");
-};
-
 const SignupForm = () => {
+  // Form fields
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   // Password show/hide button
   const [showPassword, setShowPassword] = useState(false);
   const handlePasswordButton = () => setShowPassword(!showPassword);
 
-  const errors = useActionData() as { email?: string; password?: string };
+  // Submit button loading state
+  const [loading, setLoading] = useState(false);
+
+  // Form validation errors
+  const [errors, setErrors] = useState<{ email?: string; password?: string }>(
+    {}
+  );
+
+  // React-router navigation hook
+  const navigate = useNavigate();
 
   // Form field styles
   const formControlStyles = {
     mb: "16px",
   };
 
+  // Submit event handler
+  const handleSignup: React.FormEventHandler<HTMLFormElement> = async (e) => {
+    e.preventDefault();
+
+    // Set submit button to loading state
+    setLoading(true);
+
+    // Validate the fields
+    const _errors: { email?: string; password?: string } = {};
+    if (typeof email !== "string" || !email.includes("@")) {
+      _errors.email = "Enter a valid email address";
+    }
+
+    if (typeof password !== "string" || password.length < 6) {
+      _errors.password = "Password must be greater than 6 characters";
+    }
+
+    setErrors(_errors);
+
+    // Disable submit button loading state
+    setLoading(false);
+
+    // Redirect to home page if no errors
+    if (Object.keys(_errors).length === 0) {
+      navigate("/");
+    }
+  };
+
   return (
     <>
-      <Form method="post">
+      <form method="post" onSubmit={handleSignup}>
         {/* Email address */}
-        <FormControl {...formControlStyles}>
+        <FormControl
+          {...formControlStyles}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setEmail(e.target.value)
+          }
+        >
           <Input
             autoFocus
             isRequired
@@ -70,7 +89,12 @@ const SignupForm = () => {
         </FormControl>
 
         {/* Password */}
-        <FormControl {...formControlStyles}>
+        <FormControl
+          {...formControlStyles}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setPassword(e.target.value)
+          }
+        >
           <InputGroup>
             <Input
               pr="74px"
@@ -102,10 +126,16 @@ const SignupForm = () => {
         </FormControl>
 
         {/* Submit button */}
-        <Button variant="smallButton" type="submit" w="100%">
+        <Button
+          variant="smallButton"
+          type="submit"
+          w="100%"
+          isLoading={loading}
+          loadingText="Submitting..."
+        >
           Submit
         </Button>
-      </Form>
+      </form>
 
       <Text>or</Text>
 

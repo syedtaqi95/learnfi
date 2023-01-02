@@ -59,6 +59,10 @@ const Navbar = () => {
           <Button bg={bg}>Home</Button>
         </Link>
 
+        <Link to="/signup">
+          <Button bg={bg}>Log In</Button>
+        </Link>
+
         <IconButton
           as="a"
           href="https://github.com/syedtaqi95/learnfi"
@@ -101,6 +105,10 @@ const Navbar = () => {
               <MenuList>
                 <Link to="/">
                   <MenuItem>Home</MenuItem>
+                </Link>
+
+                <Link to="/signup">
+                  <MenuItem>Log In</MenuItem>
                 </Link>
 
                 <MenuItem onClick={toggleColorMode}>

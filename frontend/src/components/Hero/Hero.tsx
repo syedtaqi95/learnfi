@@ -44,17 +44,16 @@ const Hero = () => {
         wrap="wrap"
       >
         {/* Sign up button */}
-        <Link to="signup">
-          <Button
-            {...commonButtonStyles}
-            rightIcon={<IoMdArrowForward />}
-            color={useColorModeValue("gray.50", "gray.800")}
-            bg={useColorModeValue("green.500", "green.400")}
-            _hover={{ bg: useColorModeValue("green.600", "green.300") }}
-          >
-            Sign Up
-          </Button>
-        </Link>
+
+        <Button
+          {...commonButtonStyles}
+          rightIcon={<IoMdArrowForward />}
+          color={useColorModeValue("gray.50", "gray.800")}
+          bg={useColorModeValue("green.500", "green.400")}
+          _hover={{ bg: useColorModeValue("green.600", "green.300") }}
+        >
+          <Link to="signup">Sign Up</Link>
+        </Button>
 
         {/* GitHub button */}
         <Button
